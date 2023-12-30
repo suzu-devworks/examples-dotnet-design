@@ -22,6 +22,8 @@
     "editor.defaultFormatter": "ms-dotnettools.csharp"
   },
   "cSpell.words": [
-    "Autofac"
+    "Creational",
+    "Mediat",
+    "Seedwork"
   ]
 }
