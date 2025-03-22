@@ -1,0 +1,650 @@
+[
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "0a97eec8-2544-4f36-a28e-47fc789299a1"
+      },
+      "Id": "23bde111-9df5-495a-9b75-446622b49a37"
+    },
+    "FileName": "Buyer.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Microsoft.Tests/Microsoft/Ordering.Domain/AggregatesModel/BuyerAggregate/Buyer.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 7,
+        "CharNumber": 21,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: These words must begin with upper case characters: eShopOnContainers"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "0a97eec8-2544-4f36-a28e-47fc789299a1"
+      },
+      "Id": "df5e2e8b-bdb8-434c-9b9a-02649a020d8f"
+    },
+    "FileName": "Builder.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Microsoft.Tests/Microsoft.Tests/Ordering.Domain/Builder.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 16,
+        "CharNumber": 32,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "0a97eec8-2544-4f36-a28e-47fc789299a1"
+      },
+      "Id": "6a49b9b1-1b3e-4c60-8273-1d5cb73d9304"
+    },
+    "FileName": "Entity.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Microsoft.Tests/Microsoft/Ordering.Domain/SeedWork/Entity.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 10,
+        "CharNumber": 21,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: The first word, \u0027Id\u0027, must begin with a lower case character"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "0a97eec8-2544-4f36-a28e-47fc789299a1"
+      },
+      "Id": "096999db-ada7-463a-94b4-91bcd284101c"
+    },
+    "FileName": "BuyerAggregateTest.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Microsoft.Tests/Microsoft.Tests/Ordering.Domain/SeedWork/BuyerAggregateTest.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 36,
+        "CharNumber": 17,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: These words must begin with upper case characters: add_payment_success"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "0a97eec8-2544-4f36-a28e-47fc789299a1"
+      },
+      "Id": "096999db-ada7-463a-94b4-91bcd284101c"
+    },
+    "FileName": "BuyerAggregateTest.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Microsoft.Tests/Microsoft.Tests/Ordering.Domain/SeedWork/BuyerAggregateTest.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 58,
+        "CharNumber": 17,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: These words must begin with upper case characters: create_payment_method_success"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "0a97eec8-2544-4f36-a28e-47fc789299a1"
+      },
+      "Id": "096999db-ada7-463a-94b4-91bcd284101c"
+    },
+    "FileName": "BuyerAggregateTest.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Microsoft.Tests/Microsoft.Tests/Ordering.Domain/SeedWork/BuyerAggregateTest.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 77,
+        "CharNumber": 17,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: These words must begin with upper case characters: create_payment_method_expiration_fail"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "0a97eec8-2544-4f36-a28e-47fc789299a1"
+      },
+      "Id": "096999db-ada7-463a-94b4-91bcd284101c"
+    },
+    "FileName": "BuyerAggregateTest.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Microsoft.Tests/Microsoft.Tests/Ordering.Domain/SeedWork/BuyerAggregateTest.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 92,
+        "CharNumber": 17,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: These words must begin with upper case characters: payment_method_isEqualTo"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "0a97eec8-2544-4f36-a28e-47fc789299a1"
+      },
+      "Id": "ad3c0e6a-86e6-4905-b8ef-e528912c6ae4"
+    },
+    "FileName": "IBuyerRepository.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Microsoft.Tests/Microsoft/Ordering.Domain/AggregatesModel/BuyerAggregate/IBuyerRepository.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 13,
+        "CharNumber": 38,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: The first word, \u0027BuyerIdentityGuid\u0027, must begin with a lower case character"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "0a97eec8-2544-4f36-a28e-47fc789299a1"
+      },
+      "Id": "08373abd-be67-4628-bda1-a0abdebe9389"
+    },
+    "FileName": "OrderAggregateTest.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Microsoft.Tests/Microsoft.Tests/Ordering.Domain/SeedWork/OrderAggregateTest.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 97,
+        "CharNumber": 17,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: These words must begin with upper case characters: when_add_two_times_on_the_same_item_then_the_total_of_order_should_be_the_sum_of_the_two_items"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "0a97eec8-2544-4f36-a28e-47fc789299a1"
+      },
+      "Id": "445e31d1-abdb-4b83-a3ea-a30952903c8a"
+    },
+    "FileName": "OrderItem.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Microsoft.Tests/Microsoft/Ordering.Domain/AggregatesModel/OrderAggregate/OrderItem.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 22,
+        "CharNumber": 105,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: The first word, \u0027PictureUrl\u0027, must begin with a lower case character"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "0a97eec8-2544-4f36-a28e-47fc789299a1"
+      },
+      "Id": "a5493cc1-2ec4-4e73-881d-609a6f14ecfe"
+    },
+    "FileName": "PaymentMethod.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Microsoft.Tests/Microsoft/Ordering.Domain/AggregatesModel/BuyerAggregate/PaymentMethod.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 10,
+        "CharNumber": 33,
+        "DiagnosticId": "IDE0052",
+        "FormatDescription": "warning IDE0052: Private member \u0027PaymentMethod._alias\u0027 can be removed as the value assigned to it is never read"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "0a97eec8-2544-4f36-a28e-47fc789299a1"
+      },
+      "Id": "a5493cc1-2ec4-4e73-881d-609a6f14ecfe"
+    },
+    "FileName": "PaymentMethod.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Microsoft.Tests/Microsoft/Ordering.Domain/AggregatesModel/BuyerAggregate/PaymentMethod.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 12,
+        "CharNumber": 33,
+        "DiagnosticId": "IDE0052",
+        "FormatDescription": "warning IDE0052: Private member \u0027PaymentMethod._securityNumber\u0027 can be removed as the value assigned to it is never read"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "0a97eec8-2544-4f36-a28e-47fc789299a1"
+      },
+      "Id": "a5493cc1-2ec4-4e73-881d-609a6f14ecfe"
+    },
+    "FileName": "PaymentMethod.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Microsoft.Tests/Microsoft/Ordering.Domain/AggregatesModel/BuyerAggregate/PaymentMethod.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 13,
+        "CharNumber": 33,
+        "DiagnosticId": "IDE0052",
+        "FormatDescription": "warning IDE0052: Private member \u0027PaymentMethod._cardHolderName\u0027 can be removed as the value assigned to it is never read"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "602c2e17-175d-41fc-96be-b852677c3e28"
+    },
+    "FileName": "EventSerializer.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Events/EventSerializer.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 26,
+        "CharNumber": 31,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "602c2e17-175d-41fc-96be-b852677c3e28"
+    },
+    "FileName": "EventSerializer.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Events/EventSerializer.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 14,
+        "CharNumber": 55,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: These words must begin with upper case characters: instance"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "efdf2fcc-3c65-484f-bab9-12f019724983"
+    },
+    "FileName": "Notification.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Notifications/Notification.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 25,
+        "CharNumber": 39,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "efdf2fcc-3c65-484f-bab9-12f019724983"
+    },
+    "FileName": "Notification.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Notifications/Notification.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 26,
+        "CharNumber": 35,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "efdf2fcc-3c65-484f-bab9-12f019724983"
+    },
+    "FileName": "Notification.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Notifications/Notification.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 27,
+        "CharNumber": 33,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "efdf2fcc-3c65-484f-bab9-12f019724983"
+    },
+    "FileName": "Notification.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Notifications/Notification.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 28,
+        "CharNumber": 30,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "efdf2fcc-3c65-484f-bab9-12f019724983"
+    },
+    "FileName": "Notification.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Notifications/Notification.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 24,
+        "CharNumber": 31,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "7a69548e-d406-451d-b83b-3cb8409c5c78"
+    },
+    "FileName": "StoredEvent.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Events/StoredEvent.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 26,
+        "CharNumber": 33,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "7a69548e-d406-451d-b83b-3cb8409c5c78"
+    },
+    "FileName": "StoredEvent.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Events/StoredEvent.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 33,
+        "CharNumber": 35,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "7a69548e-d406-451d-b83b-3cb8409c5c78"
+    },
+    "FileName": "StoredEvent.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Events/StoredEvent.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 47,
+        "CharNumber": 31,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "7a69548e-d406-451d-b83b-3cb8409c5c78"
+    },
+    "FileName": "StoredEvent.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Events/StoredEvent.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 40,
+        "CharNumber": 33,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "851b72eb-a3e8-472b-8902-1ddd91522abd"
+    },
+    "FileName": "NotificationLog.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Notifications/NotificationLog.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 24,
+        "CharNumber": 59,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "851b72eb-a3e8-472b-8902-1ddd91522abd"
+    },
+    "FileName": "NotificationLog.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Notifications/NotificationLog.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 25,
+        "CharNumber": 31,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "851b72eb-a3e8-472b-8902-1ddd91522abd"
+    },
+    "FileName": "NotificationLog.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Notifications/NotificationLog.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 21,
+        "CharNumber": 33,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "851b72eb-a3e8-472b-8902-1ddd91522abd"
+    },
+    "FileName": "NotificationLog.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Notifications/NotificationLog.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 22,
+        "CharNumber": 33,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "851b72eb-a3e8-472b-8902-1ddd91522abd"
+    },
+    "FileName": "NotificationLog.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Notifications/NotificationLog.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 23,
+        "CharNumber": 33,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "8e23fa30-73a4-49b8-8636-248582704e87"
+    },
+    "FileName": "DomainEventPublisher.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Domain.Model/DomainEventPublisher.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 125,
+        "CharNumber": 45,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "8e23fa30-73a4-49b8-8636-248582704e87"
+    },
+    "FileName": "DomainEventPublisher.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Domain.Model/DomainEventPublisher.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 42,
+        "CharNumber": 22,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "5e847a09-b1c6-4293-80af-aa97cdd1dbdf"
+    },
+    "FileName": "EventSourcedRootEntity.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Domain.Model/EventSourcedRootEntity.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 24,
+        "CharNumber": 30,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "5e847a09-b1c6-4293-80af-aa97cdd1dbdf"
+    },
+    "FileName": "EventSourcedRootEntity.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Domain.Model/EventSourcedRootEntity.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 23,
+        "CharNumber": 45,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "69c095c2-de22-47fc-9ee9-f27a41d4b46c"
+    },
+    "FileName": "NotificationLogInfo.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Notifications/NotificationLogInfo.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 23,
+        "CharNumber": 31,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "69c095c2-de22-47fc-9ee9-f27a41d4b46c"
+    },
+    "FileName": "NotificationLogInfo.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Notifications/NotificationLogInfo.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 16,
+        "CharNumber": 44,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  },
+  {
+    "DocumentId": {
+      "ProjectId": {
+        "Id": "11f75fbe-d94a-4fb8-9341-5083b50dffc9"
+      },
+      "Id": "b97a6bf9-a964-4083-a228-bc7e19e61038"
+    },
+    "FileName": "ValueObject.cs",
+    "FilePath": "/workspaces/examples-dotnet-designs/src/Examples.Design.Vernon.Tests/Vernon/Domain.Model/ValueObject.cs",
+    "FileChanges": [
+      {
+        "LineNumber": 60,
+        "CharNumber": 45,
+        "DiagnosticId": "IDE1006",
+        "FormatDescription": "warning IDE1006: Naming rule violation: Missing prefix: \u0027_\u0027"
+      }
+    ]
+  }
+]
