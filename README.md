@@ -1,5 +1,6 @@
 # examples-dotnet-design
 
+[![build](https://github.com/suzu-devworks/examples-dotnet-design/actions/workflows/dotnet-build.yml/badge.svg)](https://github.com/suzu-devworks/examples-dotnet-design/actions/workflows/dotnet-build.yml)
 [![CodeQL](https://github.com/suzu-devworks/examples-dotnet-design/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/suzu-devworks/examples-dotnet-design/actions/workflows/github-code-scanning/codeql)
 
 Workspace for studying dotnet program design.
