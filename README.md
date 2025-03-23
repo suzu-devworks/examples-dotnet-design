@@ -1,5 +1,7 @@
 # examples-dotnet-design
 
+[![CodeQL](https://github.com/suzu-devworks/examples-dotnet-design/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/suzu-devworks/examples-dotnet-design/actions/workflows/github-code-scanning/codeql)
+
 Workspace for studying dotnet program design.
 
 ## What is this
