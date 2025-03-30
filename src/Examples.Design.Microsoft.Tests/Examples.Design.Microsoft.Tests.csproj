@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <RootNamespace>Examples.Design</RootNamespace>
+    <RootNamespace>Examples</RootNamespace>
     <NoWarn>$(NoWarn);IDE1006;IDE0290</NoWarn>
   </PropertyGroup>
 
