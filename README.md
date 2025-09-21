@@ -11,7 +11,7 @@ It might be useful for developers who have the same problem.
 
 However, please note that the code discussed here is based on my personal opinion and may contain many inaccuracies.
 
-## Project Index
+## Index
 
 - Design Patterns
   - [Examples.Design.Gof.Tests](./src/Examples.Design.Gof.Tests/README.md)
@@ -23,7 +23,3 @@ However, please note that the code discussed here is based on my personal opinio
   - [Examples.Design.Microsoft.Tests](./src/Examples.Design.Microsoft.Tests/README.md)
 - Others
   - [Examples.Design.Tests](./src/Examples.Design.Tests/README.md)
-
-## More documents
-
-- [See here ...](./docs/README.md)

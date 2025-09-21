@@ -8,18 +8,14 @@
     },
     "editor.defaultFormatter": "ms-dotnettools.csharp"
   },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[jsonc]": {
+  "[json][jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[markdown]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.markdownlint": "explicit"
     },
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
   "[razor]": {
     "editor.defaultFormatter": "ms-dotnettools.csharp"
@@ -34,9 +30,7 @@
     "appsettings*.json": "jsonc",
     "web.config": "xml"
   },
-  "markdownlint.config": {
-    "MD024": false
-  },
+  "markdownlint.config": {},
   "omnisharp.enableAsyncCompletion": true,
   "omnisharp.enableEditorConfigSupport": true,
   "omnisharp.enableMsBuildLoadProjectsOnDemand": true,
