@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>$(LatestFramework)</TargetFramework>
-    <ImplicitUsings>disable</ImplicitUsings>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -28,7 +28,6 @@
 
   <ItemGroup>
     <Using Include="Xunit" />
-    <Using Include="ChainingAssertion" />
     <Using Include="Moq" />
   </ItemGroup>
 
