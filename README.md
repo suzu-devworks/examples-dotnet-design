@@ -7,9 +7,9 @@
 
 This repository is the author's personal playground for learning programming patterns such as Domain-Driven Design with .NET.
 
-It might be useful for developers who have the same problem.
+The content here may be useful to other developers who have the same problem.
 
-However, please note that the code discussed here is based on my personal opinion and may contain many inaccuracies.
+However, please note that the code described here is based on my personal opinion and may contain many inaccuracies.
 
 ## Index
 
