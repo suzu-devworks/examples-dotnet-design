@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>$(LatestFramework)</TargetFramework>
-    <ImplicitUsings>disable</ImplicitUsings>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -13,7 +13,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ChainingAssertion.Core.Xunit" Version="1.1.0" />
     <PackageReference Include="coverlet.collector" Version="6.0.4">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -29,7 +28,6 @@
 
   <ItemGroup>
     <Using Include="Xunit" />
-    <Using Include="ChainingAssertion" />
     <Using Include="Moq" />
   </ItemGroup>
 
