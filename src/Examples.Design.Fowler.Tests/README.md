@@ -2,19 +2,34 @@
 
 ## Table of Contents <!-- omit in toc -->
 
-- [Examples.Design.Fowler.Tests](#examplesdesignfowlertests)
-  - [Martin Fowler's Domain-Driven Design](#martin-fowlers-domain-driven-design)
-  - [Patterns of Enterprise Application Architecture](#patterns-of-enterprise-application-architecture)
-  - [Development](#development)
-    - [How the project was initialized](#how-the-project-was-initialized)
+- [Martin Fowler's Domain-Driven Design](#martin-fowlers-domain-driven-design)
+- [Patterns of Enterprise Application Architecture](#patterns-of-enterprise-application-architecture)
+  - [Catalog](#catalog)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
 
 ## Martin Fowler's Domain-Driven Design
 
-- <https://martinfowler.com/tags/domain%20driven%20design.html>
+- [domain driven design - martinfowler.com](https://martinfowler.com/tags/domain%20driven%20design.html)
+
+<!-- spell-checker: words martinfowler -->
 
 ## Patterns of Enterprise Application Architecture
 
-- <https://martinfowler.com/eaaCatalog/>
+- [Catalog of Patterns of Enterprise Application Architecture](https://martinfowler.com/eaaCatalog/)
+
+### Catalog
+
+- [Domain Logic Patterns](./Design.Fowler.Tests/DomainLogic/)
+- [Data Source Architectural Patterns](./Design.Fowler.Tests/DataSourceArchitectural/)
+- [Object-Relational Behavioral Patterns](./Design.Fowler.Tests/ObjectRelationalBehavioral/)
+- [Object-Relational Structural Patterns](./Design.Fowler.Tests/ObjectRelationalStructural/)
+- [Object-Relational Metadata Mapping Patterns](./Design.Fowler.Tests/ObjectRelationalMetadataMapping/)
+- [Web Presentation Patterns](./Design.Fowler.Tests/WebPresentation/)
+- [Distribution Patterns](./Design.Fowler.Tests/Distribution/)
+- [Offline Concurrency Patterns](./Design.Fowler.Tests/OfflineConcurrency/)
+- [Session State Patterns](./Design.Fowler.Tests/SessionState/)
+- [Base Patterns](./Design.Fowler.Tests/Base/)
 
 ## Development
 
@@ -35,7 +50,6 @@ dotnet add package xunit
 dotnet add package xunit.runner.visualstudio
 dotnet add package coverlet.collector
 dotnet add package Moq
-dotnet add package ChainingAssertion.Core.Xunit
 cd ../../
 
 # Update outdated package
