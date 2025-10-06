@@ -19,7 +19,8 @@ public class TimeRecordMapper : Mapper
 
     protected override void DoLoadLine(IDataReader reader, DomainObject obj)
     {
-        /* There must be something */
+        TimeRecord timeRecord = (TimeRecord)obj;
+        timeRecord.RecordedAt = (DateTime)reader["recorded_at"];
     }
 
     protected override string FindStatement()

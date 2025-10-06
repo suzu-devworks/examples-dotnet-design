@@ -5,15 +5,9 @@ namespace Examples.Design.Fowler.Tests.ObjectRelationalBehavioral.LazyLoad.Ghost
 
 public class ListLoader
 {
-    private readonly IDbConnection _connection;
-
-    public ListLoader(IDbConnection connection)
-    {
-        _connection = connection;
-    }
-
     public string? Sql { get; set; }
-    public IDictionary<string, object> SqlParams { get; set; } = new Dictionary<string, object>();
+    public IDictionary<string, object> SqlParams { get; set; }
+        = new Dictionary<string, object>();
     public Mapper? Mapper { get; set; }
 
     public void Attach<T>(DomainList<T> list)
@@ -26,8 +20,9 @@ public class ListLoader
         where T : DomainObject
     {
         ArgumentException.ThrowIfNullOrEmpty(Sql);
+        if (Mapper is null) throw new InvalidOperationException("Mapper is null");
 
-        using IDbCommand comm = _connection.CreateCommand();
+        using IDbCommand comm = Mapper.Connection.CreateCommand();
         comm.CommandText = Sql;
         foreach (var (key, value) in SqlParams)
         {

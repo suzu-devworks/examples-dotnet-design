@@ -11,4 +11,24 @@ public class TimeRecord : DomainObject
     public TimeRecord(long key) : base(key)
     {
     }
+
+    public DateTime RecordedAt
+    {
+        get
+        {
+            Load();
+            return _recordedAt!.Value;
+        }
+        set
+        {
+            Load();
+            _recordedAt = value;
+        }
+    }
+    private DateTime? _recordedAt;
+
+    protected void Load()
+    {
+        if (IsGhost) DataSource.Load(this);
+    }
 }

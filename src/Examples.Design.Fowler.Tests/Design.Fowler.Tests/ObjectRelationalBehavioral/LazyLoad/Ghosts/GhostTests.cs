@@ -1,6 +1,6 @@
-using System.Data;
 using Examples.Design.Fowler.Tests.ObjectRelationalBehavioral.LazyLoad.Ghosts.DataSources;
 using Examples.Design.Fowler.Tests.ObjectRelationalBehavioral.LazyLoad.Ghosts.Domains;
+using Examples.Xunit.Helper;
 
 namespace Examples.Design.Fowler.Tests.ObjectRelationalBehavioral.LazyLoad.Ghosts;
 
@@ -39,46 +39,23 @@ public class GhostTests
     [Fact]
     public void TestPofEAA_11_3_6_UseGhost()
     {
-        var mockConnection = new Mock<IDbConnection>();
-        var mockCommand = new Mock<IDbCommand>();
-        var mockParameter = new Mock<IDbDataParameter>();
-        var mockParameters = new Mock<IDataParameterCollection>();
-        var mockReader1 = new Mock<IDataReader>();
-        var mockReader2 = new Mock<IDataReader>();
-        var mockReader3 = new Mock<IDataReader>();
+        var dbMockEmployee = DbMockFactory.CreateDbMocks(new[] {
+            new { Id = 100L, Name = "ALICE", DepartmentId = 200L },
+        });
 
-        mockConnection.Setup(x => x.CreateCommand()).Returns(mockCommand.Object);
+        var dbMockDepartment = DbMockFactory.CreateDbMocks(new[] {
+            new { Id = 200L, Name = "SALES"},
+        });
 
-        mockCommand.SetupProperty(x => x.CommandText, It.IsAny<string>());
-        mockCommand.Setup(x => x.CreateParameter()).Returns(mockParameter.Object);
-        mockParameter.SetupProperty(x => x.ParameterName);
-        mockParameter.SetupProperty(x => x.Value);
-        mockCommand.SetupGet(x => x.Parameters).Returns(mockParameters.Object);
-        mockParameters.Setup(x => x.Add(It.IsAny<IDbDataParameter>()));
+        var dbMockTimeRecord = DbMockFactory.CreateDbMocks(new[] {
+            new { Id = 301L, RecordedAt = DateTime.Parse("2025-10-02")},
+            new { Id = 302L, RecordedAt = DateTime.Parse("2025-10-03")},
+            new { Id = 303L, RecordedAt = DateTime.Parse("2025-10-06")},
+        });
 
-        mockCommand.SetupSequence(x => x.ExecuteReader())
-            .Returns(mockReader1.Object)
-            .Returns(mockReader2.Object)
-            .Returns(mockReader3.Object);
-
-        mockReader1.Setup(x => x.Read()).Returns(true);
-        mockReader1.Setup(x => x["name"]).Returns("ALICE");
-        mockReader1.Setup(x => x["department_id"]).Returns(200L);
-        mockReader1.Setup(x => x.Close());
-
-        mockReader2.SetupSequence(x => x.Read())
-            .Returns(true).Returns(true).Returns(true).Returns(false);
-        mockReader2.SetupSequence(x => x["id"])
-            .Returns(301L).Returns(302L).Returns(303L);
-        mockReader2.Setup(x => x.Close());
-
-        mockReader3.Setup(x => x.Read()).Returns(true);
-        mockReader3.Setup(x => x["name"]).Returns("SALES");
-        mockReader3.Setup(x => x.Close());
-
-        MapperRegistry.Register<Employee>(new EmployeeMapper(mockConnection.Object));
-        MapperRegistry.Register<Department>(new DepartmentMapper(mockConnection.Object));
-        MapperRegistry.Register<TimeRecord>(new TimeRecordMapper(mockConnection.Object));
+        MapperRegistry.Register<Employee>(new EmployeeMapper(dbMockEmployee.Connection.Object));
+        MapperRegistry.Register<Department>(new DepartmentMapper(dbMockDepartment.Connection.Object));
+        MapperRegistry.Register<TimeRecord>(new TimeRecordMapper(dbMockTimeRecord.Connection.Object));
         DataSource.Init(MapperRegistry.Instance);
 
         Employee emp = new Employee(100);
@@ -113,13 +90,8 @@ public class GhostTests
         Assert.False(dept.IsGhost);
         Assert.Equal("SALES", deptName);
 
-        mockConnection.VerifyAll();
-        mockCommand.VerifyAll();
-        mockParameter.VerifyAll();
-        mockParameters.VerifyAll();
-        mockReader1.VerifyAll();
-        mockReader2.VerifyAll();
-        mockReader3.VerifyAll();
+        dbMockEmployee.VerifyAll();
+        dbMockDepartment.VerifyAll();
+        dbMockTimeRecord.VerifyAll();
     }
-
 }

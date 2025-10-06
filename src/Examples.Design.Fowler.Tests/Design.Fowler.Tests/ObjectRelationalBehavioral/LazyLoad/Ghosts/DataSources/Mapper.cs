@@ -11,7 +11,7 @@ public abstract class Mapper
         KeyColumnName = "id";
     }
 
-    protected IDbConnection Connection { get; }
+    public IDbConnection Connection { get; }
 
     public DomainObject AbstractFind(long key)
     {

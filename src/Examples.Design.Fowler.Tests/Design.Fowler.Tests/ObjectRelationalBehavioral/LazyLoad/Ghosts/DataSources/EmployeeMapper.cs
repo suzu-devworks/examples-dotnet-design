@@ -31,9 +31,9 @@ public class EmployeeMapper : Mapper
         LoadTimeRecords(employee);
     }
 
-    private void LoadTimeRecords(Employee employee)
+    private static void LoadTimeRecords(Employee employee)
     {
-        ListLoader loader = new ListLoader(Connection);
+        ListLoader loader = new ListLoader();
         loader.Sql = TimeRecordMapper.FIND_FOR_EMPLOYEE_SQL;
         loader.SqlParams.Add("employee_key", employee.Key);
         loader.Mapper = MapperRegistry.Mapper<TimeRecord>();
