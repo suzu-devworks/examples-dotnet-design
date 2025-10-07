@@ -5,13 +5,13 @@
 
 ## What is the purpose of this repository?
 
-This repository is the author's personal playground for learning programming patterns such as Domain-Driven Design with .NET.
+This repository is just my personal playground for learning programming patterns like Domain-Driven Design (DDD) with .NET.
 
-The content here may be useful to other developers who have the same problem.
+The content here might actually be helpful to other developers facing similar issues.
 
-However, please note that the code described here is based on my personal opinion and may contain many inaccuracies.
+However, please keep in mind that this code is based solely on my own perspective and probably has lots of inaccurate or questionable parts!
 
-## Index
+## Examples
 
 - Design Patterns
   - [Examples.Design.Gof.Tests](./src/Examples.Design.Gof.Tests/README.md)

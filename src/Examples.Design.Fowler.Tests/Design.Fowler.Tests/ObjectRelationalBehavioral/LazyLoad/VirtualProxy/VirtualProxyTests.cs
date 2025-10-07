@@ -1,7 +1,7 @@
 namespace Examples.Design.Fowler.Tests.ObjectRelationalBehavioral.LazyLoad.VirtualProxy;
 
 /// <summary>
-/// Pattern 2: 仮想プロキシー (Virtual Proxy).
+/// Pattern 2: Virtual Proxy.
 /// </summary>
 /// <remarks>
 /// <para>Generated with Google Gemini Pro 2.5.</para>
@@ -14,20 +14,20 @@ public class VirtualProxyTests
         // Arrange
         ICustomer customerProxy = new CustomerProxy(2);
 
-        // Assert: Proxyオブジェクト作成直後はDBアクセスが発生しない
+        // Assert: No DB access occurs immediately after creating a proxy object.
         Assert.Equal(0, customerProxy.GetRepositoryCallCount());
 
-        // Act: 最初にOrdersプロパティにアクセスする
+        // Act: First, access the Orders property.
         var orders = customerProxy.Orders;
 
-        // Assert: 最初のアクセスで本物のオブジェクトが生成され、DBアクセスが1回発生する
+        // Assert: The first access creates a real object, which results in one DB access.
         Assert.Equal(1, customerProxy.GetRepositoryCallCount());
         Assert.Equal(2, orders.Count);
 
-        // Act: 2回目にNameプロパティにアクセスする
+        // Act: The second time you access the Name property.
         var name = customerProxy.Name;
 
-        // Assert: 2回目のアクセスではDBアクセスは増えない
+        // Assert: The second access does not increase DB access.
         Assert.Equal(1, customerProxy.GetRepositoryCallCount());
         Assert.Equal("Real Customer 2", name);
     }

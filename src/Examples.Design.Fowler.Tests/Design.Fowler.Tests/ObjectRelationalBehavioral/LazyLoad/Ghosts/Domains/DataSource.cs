@@ -7,7 +7,7 @@ public class DataSource
 {
     public interface IDataSource
     {
-        void Load<T>(T obj) where T : DomainObject;
+        void Load(DomainObject obj);
     }
 
     private static readonly DataSource Singleton = new();
@@ -20,13 +20,12 @@ public class DataSource
         Instance._dataSource = dataSource;
     }
 
-    public static void Load<T>(T obj)
-        where T : DomainObject
+    public static void Load(DomainObject obj)
     {
         if (Instance._dataSource is null)
             throw new InvalidOperationException("DataSource is null");
 
-        Instance._dataSource!.Load<T>(obj);
+        Instance._dataSource.Load(obj);
     }
 
 }

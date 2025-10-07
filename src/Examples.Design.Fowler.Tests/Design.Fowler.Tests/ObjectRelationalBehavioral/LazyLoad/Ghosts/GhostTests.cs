@@ -5,7 +5,7 @@ using Examples.Xunit.Helper;
 namespace Examples.Design.Fowler.Tests.ObjectRelationalBehavioral.LazyLoad.Ghosts;
 
 /// <summary>
-/// Pattern 4: ゴースト (Ghost).
+/// Pattern 4: Ghost.
 /// </summary>
 /// <remarks>
 /// <para>Generated with Google Gemini Pro 2.5.</para>
@@ -15,23 +15,23 @@ public class GhostTests
     [Fact]
     public void Should_Load_Full_State_On_First_Access_To_Any_Property()
     {
-        // Arrange: IDのみを持つゴーストオブジェクトを作成
+        // Arrange: Create a ghost object with only an ID.
         var customer = new Customer(4);
 
-        // Assert: ゴーストオブジェクト作成直後はDBアクセスが発生しない
+        // Assert: No DB access occurs immediately after creating a ghost object.
         Assert.Equal(0, customer.GetRepositoryCallCount());
 
-        // Act: 最初にNameプロパティにアクセスする
+        // Act: First access the Name property.
         var name = customer.Name;
 
-        // Assert: 最初のプロパティアクセスで完全なデータがロードされ、DBアクセスが1回発生する
+        // Assert: The first property access loads the full data, resulting in one DB access.
         Assert.Equal(1, customer.GetRepositoryCallCount());
         Assert.Equal("Ghost Customer 4", name);
 
-        // Act: 次にOrdersプロパティにアクセスする
+        // Act: Next, access the Orders property.
         var orders = customer.Orders;
 
-        // Assert: 既にデータはロード済みなので、DBアクセスは増えない
+        // Assert: Since the data has already been loaded, there is no increase in DB access.
         Assert.Equal(1, customer.GetRepositoryCallCount());
         Assert.Equal(2, orders.Count);
     }
@@ -48,9 +48,9 @@ public class GhostTests
         });
 
         var dbMockTimeRecord = DbMockFactory.CreateDbMocks(new[] {
-            new { Id = 301L, RecordedAt = DateTime.Parse("2025-10-02")},
-            new { Id = 302L, RecordedAt = DateTime.Parse("2025-10-03")},
-            new { Id = 303L, RecordedAt = DateTime.Parse("2025-10-06")},
+            new { Id = 301L, RecordedAt = DateTime.Parse("2025-10-02T09:00:00+9:00")},
+            new { Id = 302L, RecordedAt = DateTime.Parse("2025-10-03T09:00:00+9:00")},
+            new { Id = 303L, RecordedAt = DateTime.Parse("2025-10-06T09:00:00+9:00")},
         });
 
         MapperRegistry.Register<Employee>(new EmployeeMapper(dbMockEmployee.Connection.Object));
@@ -59,33 +59,33 @@ public class GhostTests
         DataSource.Init(MapperRegistry.Instance);
 
         Employee emp = new Employee(100);
-        // 初めはGhost.
+        // First, it is initialized with Ghost.
         Assert.True(emp.IsGhost);
 
-        // Nameプロパティにアクセスするとデータをロードする.
+        // Accessing the Name property loads the data.
         var name = emp.Name;
         Assert.False(emp.IsGhost);
         Assert.Equal("ALICE", name);
 
-        // TimeRecordsプロパティのコレクションも最初はGhost.
+        // Immediately after loading, the TimeRecords property collection is initialized with Ghost.
         var timeRecords = emp.TimeRecords;
         Assert.True(timeRecords.IsGhost);
 
-        // TimeRecord.Countプロパティにアクセスするとデータをロード.
+        // Accessing the TimeRecord.Count property loads the data.
         var timeRecordCount = timeRecords.Count;
         Assert.False(timeRecords.IsGhost);
         Assert.Equal(3, timeRecordCount);
 
-        // 個別のTimeRecordはコレクションをロードした時にロード済.
+        // Individual TimeRecords are pre-loaded when the collection is loaded, avoiding ripple loading.
         var timeRecordRow0 = timeRecords[0];
         Assert.False(timeRecordRow0.IsGhost);
 
-        // Departmentプロパティのオブジェクトも最初はGhost.
+        // The Department property is also initially initialized to Ghost.
         var dept = emp.Department;
         Assert.True(dept is not null);
         Assert.True(dept.IsGhost);
 
-        // Department.Nameプロパティにアクセスするとデータをロードする.
+        // Accessing the Department.Name property loads the data.
         var deptName = dept.Name;
         Assert.False(dept.IsGhost);
         Assert.Equal("SALES", deptName);

@@ -1,7 +1,7 @@
 namespace Examples.Design.Fowler.Tests.ObjectRelationalBehavioral.LazyLoad;
 
 /// <summary>
-/// 注文を表すシンプルなドメインオブジェクト
+/// A simple domain object that represents an order.
 /// </summary>
 public class Order
 {

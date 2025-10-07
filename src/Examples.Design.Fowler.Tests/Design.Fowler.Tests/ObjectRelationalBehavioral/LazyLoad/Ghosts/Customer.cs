@@ -11,7 +11,7 @@ public class Customer
     {
         get
         {
-            Load(); // アクセス時にロードを試みる
+            Load(); // Attempt to load on access.
             return _name!;
         }
     }
@@ -21,24 +21,25 @@ public class Customer
     {
         get
         {
-            Load(); // アクセス時にロードを試みる
+            Load(); // Attempt to load on access.
             return _orders!;
         }
     }
 
-    // ゴーストとしてIDのみで初期化する
+    // Initialize as a ghost with ID only.
     public Customer(int id)
     {
         Id = id;
     }
 
-    // 全データをロードするメソッド
+    // Method to load all data.
     private void Load()
     {
         if (_isGhost)
         {
-            // ここでDBからNameやOrdersなど全データを取得する
-            // 本来は1回のDBアクセスで全データを取得するが、ここではOrdersの取得で代用
+            // Here we retrieve all data such as Name and Orders from the DB.
+            // Normally, all data would be retrieved in one DB access, 
+            // but here we will retrieve Orders instead.
             _orders = _repository.GetOrdersForCustomer(Id);
             _name = $"Ghost Customer {Id}";
 

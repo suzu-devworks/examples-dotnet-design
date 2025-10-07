@@ -27,8 +27,4 @@ public class TimeRecord : DomainObject
     }
     private DateTime? _recordedAt;
 
-    protected void Load()
-    {
-        if (IsGhost) DataSource.Load(this);
-    }
 }

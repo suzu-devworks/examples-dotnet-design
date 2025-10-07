@@ -52,9 +52,4 @@ public class Employee : DomainObject
     }
     private DomainList<TimeRecord> _timeRecords = [];
 
-    protected void Load()
-    {
-        if (IsGhost) DataSource.Load(this);
-    }
-
 }
