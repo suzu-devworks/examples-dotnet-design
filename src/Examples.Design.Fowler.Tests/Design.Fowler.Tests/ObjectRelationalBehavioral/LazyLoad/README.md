@@ -4,6 +4,12 @@ An object that doesn't contain all of the data you need but knows how to get it.
 
 ## Table of Contents <!-- omit in toc -->
 
+- [Lazy Initialization](#lazy-initialization)
+- [Virtual Proxy](#virtual-proxy)
+- [Value Holder](#value-holder)
+- [Ghost object](#ghost-object)
+  - [11.3.6 Use Ghost](#1136-use-ghost)
+
 ## Lazy Initialization
 
 Lazy Initialization is the most direct way to implement **lazy loading within the object itself**.
