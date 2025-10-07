@@ -4,7 +4,7 @@ public class Customer
 {
     private readonly FakeOrderRepository _repository = new FakeOrderRepository();
 
-    // Ordersリストを保持するプライベートフィールド。初期値はnull。
+    // A private field that holds the list of Orders. Initial value is null.
     private List<Order>? _orders;
 
     public required int Id { get; init; }
@@ -14,7 +14,7 @@ public class Customer
     {
         get
         {
-            // フィールドがnullの場合のみ、データをロードする
+            // Load data only if the field is null.
             if (_orders == null)
             {
                 _orders = _repository.GetOrdersForCustomer(Id);
@@ -23,6 +23,6 @@ public class Customer
         }
     }
 
-    // テスト用にリポジトリの状態を確認するためのメソッド
-    public int GetRepositoryCallCount() => _repository.CallCount;
+    // Methods to check repository state for testing purposes.
+    internal int GetRepositoryCallCount() => _repository.CallCount;
 }

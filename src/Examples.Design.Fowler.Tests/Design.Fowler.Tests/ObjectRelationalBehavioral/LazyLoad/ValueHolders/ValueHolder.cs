@@ -1,6 +1,6 @@
 namespace Examples.Design.Fowler.Tests.ObjectRelationalBehavioral.LazyLoad.ValueHolders;
 
-// 値の遅延読み込みを担当する汎用クラス
+// A general-purpose class responsible for lazy loading of values.
 public class ValueHolder<T>
 {
     private T? _value;

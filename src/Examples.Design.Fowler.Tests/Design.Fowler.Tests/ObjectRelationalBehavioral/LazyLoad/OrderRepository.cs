@@ -2,20 +2,20 @@
 namespace Examples.Design.Fowler.Tests.ObjectRelationalBehavioral.LazyLoad;
 
 /// <summary>
-/// データベースへのアクセスをシミュレートするリポジトリ
+/// A repository that simulates database access.
 /// </summary>
 public class FakeOrderRepository
 {
     public int CallCount { get; private set; }
 
-    // 特定の顧客IDに対する注文リストを取得する（DBアクセスの代わり）
+    // Get a list of orders for a specific customer ID (instead of a database access).
     public List<Order> GetOrdersForCustomer(int customerId)
     {
-        // このメソッドが呼ばれたことを記録
+        // Record that this method was called.
         CallCount++;
         Console.WriteLine($"---> DATABASE HIT: Loading orders for customer {customerId}...");
 
-        // サンプルデータを返す
+        // Returning sample data.
         return new List<Order>
         {
             new Order { OrderId = 101, ProductName = "Book" },

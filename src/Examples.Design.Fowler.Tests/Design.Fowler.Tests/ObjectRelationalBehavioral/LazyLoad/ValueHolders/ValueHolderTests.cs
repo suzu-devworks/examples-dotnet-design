@@ -1,7 +1,7 @@
 namespace Examples.Design.Fowler.Tests.ObjectRelationalBehavioral.LazyLoad.ValueHolders;
 
 /// <summary>
-/// Pattern 3: バリューホルダー (Value Holder).
+/// Pattern 3: Value Holder.
 /// </summary>
 /// <remarks>
 /// <para>Generated with Google Gemini Pro 2.5.</para>
@@ -14,20 +14,20 @@ public class ValueHolderTests
         // Arrange
         var customer = new Customer(3);
 
-        // Assert: Customerオブジェクト作成直後はDBアクセスが発生しない
+        // Assert: No DB access occurs immediately after creating a Customer object.
         Assert.Equal(0, customer.GetRepositoryCallCount());
 
-        // Act: ValueHolderのValueプロパティに初めてアクセスする
+        // Act: Accessing the Value property of a ValueHolder for the first time.
         var orders = customer.Orders.Value;
 
-        // Assert: 最初のアクセスでDBアクセスが1回発生する
+        // Assert: The first access will result in one DB access.
         Assert.Equal(1, customer.GetRepositoryCallCount());
         Assert.Equal(2, orders.Count);
 
-        // Act: 2回目にアクセスする
+        // Act: Second.
         var ordersAgain = customer.Orders.Value;
 
-        // Assert: 2回目のアクセスではDBアクセスは増えない
+        // Assert: The second access does not increase DB access.
         Assert.Equal(1, customer.GetRepositoryCallCount());
         Assert.Equal(2, ordersAgain.Count);
     }

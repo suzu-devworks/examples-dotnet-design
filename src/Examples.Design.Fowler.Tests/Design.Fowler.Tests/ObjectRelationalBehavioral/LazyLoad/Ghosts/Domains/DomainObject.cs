@@ -35,10 +35,16 @@ public abstract class DomainObject
         _status = LoadStatus.Loaded;
     }
 
-    private enum LoadStatus
+    protected void Load()
+    {
+        if (IsGhost) DataSource.Load(this);
+    }
+
+    public enum LoadStatus
     {
         Ghosts,
         Loading,
         Loaded,
     }
+
 }

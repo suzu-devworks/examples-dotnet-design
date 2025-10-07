@@ -9,10 +9,9 @@ public class MapperRegistry : DataSource.IDataSource
 
     private Dictionary<Type, Mapper> _mappers = new();
 
-    public void Load<T>(T obj)
-        where T : DomainObject
+    public void Load(DomainObject obj)
     {
-        Mapper<T>().Load(obj);
+        Mapper(obj.GetType()).Load(obj);
     }
 
     public static void Register<T>(Mapper mapper)
@@ -25,9 +24,15 @@ public class MapperRegistry : DataSource.IDataSource
         Instance._mappers.Remove(typeof(T));
     }
 
-    public static Mapper Mapper<T>()
+    public static Mapper Mapper(Type type)
     {
-        return Instance._mappers[typeof(T)];
+        return Instance._mappers[type];
+    }
+
+    public static Mapper Mapper<T>()
+        where T : DomainObject
+    {
+        return Mapper(typeof(T));
     }
 
 }

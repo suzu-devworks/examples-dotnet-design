@@ -5,7 +5,7 @@ public class Customer
     public int Id { get; }
     public string? Name { get; set; }
 
-    // OrdersプロパティはValueHolderとして持つ
+    // The Orders property is a ValueHolder.
     public ValueHolder<List<Order>> Orders { get; private set; }
 
     private readonly FakeOrderRepository _repository;
@@ -15,9 +15,9 @@ public class Customer
         Id = id;
         _repository = new FakeOrderRepository();
 
-        // ValueHolderにデータ読み込みのロジックを渡して初期化
+        // Initialize the ValueHolder by passing the data loading logic to it.
         Orders = new ValueHolder<List<Order>>(() => _repository.GetOrdersForCustomer(Id));
     }
 
-    public int GetRepositoryCallCount() => _repository.CallCount;
+    internal int GetRepositoryCallCount() => _repository.CallCount;
 }

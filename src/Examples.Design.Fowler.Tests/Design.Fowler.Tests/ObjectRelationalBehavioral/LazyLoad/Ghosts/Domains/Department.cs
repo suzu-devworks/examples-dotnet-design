@@ -27,8 +27,4 @@ public class Department : DomainObject
     }
     private string? _name;
 
-    protected void Load()
-    {
-        if (IsGhost) DataSource.Load(this);
-    }
 }

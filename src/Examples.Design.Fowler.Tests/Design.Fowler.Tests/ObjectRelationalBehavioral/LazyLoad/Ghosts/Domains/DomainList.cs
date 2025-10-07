@@ -28,7 +28,7 @@ public class DomainList<T> : DomainObject, IList<T>
     }
     private IList<T> _data = new List<T>();
 
-    private void Load()
+    private new void Load()
     {
         if (IsGhost)
         {
