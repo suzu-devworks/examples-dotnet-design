@@ -2,16 +2,15 @@
 
 ## Table of Contents <!-- omit in toc -->
 
-- [Examples.Design.Anderson.Tests](#examplesdesignandersontests)
-  - [Piikokku Anderson's Domain-Driven Design](#piikokku-andersons-domain-driven-design)
-    - [Hexagonal Architecture](#hexagonal-architecture)
-    - [Domain logic and client code](#domain-logic-and-client-code)
-    - [Entity](#entity)
-    - [ValueObject](#valueobject)
-    - [Repository](#repository)
-    - [Factory](#factory)
-  - [Development](#development)
-    - [How the project was initialized](#how-the-project-was-initialized)
+- [Piikokku Anderson's Domain-Driven Design](#piikokku-andersons-domain-driven-design)
+  - [Hexagonal Architecture](#hexagonal-architecture)
+  - [Domain logic and client code](#domain-logic-and-client-code)
+  - [Entity](#entity)
+  - [ValueObject](#valueobject)
+  - [Repository](#repository)
+  - [Factory](#factory)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
 
 ## Piikokku Anderson's Domain-Driven Design
 <!-- spell-checker:words Piikokku -->

@@ -2,17 +2,16 @@
 
 ## Table of Contents <!-- omit in toc -->
 
-- [Examples.Design.Microsoft.Tests](#examplesdesignmicrosofttests)
-  - [Tackle Business Complexity in a Microservice with DDD and CQRS Patterns](#tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns)
-    - [CQS/CQRS](#cqscqrs)
-    - [Entity](#entity)
-    - [Value Object](#value-object)
-    - [Aggregate](#aggregate)
-    - [Aggregate Root or Root Entity](#aggregate-root-or-root-entity)
-    - [Use enumeration classes instead of enum types](#use-enumeration-classes-instead-of-enum-types)
-  - [eShopOnContainers](#eshoponcontainers)
-  - [Development](#development)
-    - [How the project was initialized](#how-the-project-was-initialized)
+- [Tackle Business Complexity in a Microservice with DDD and CQRS Patterns](#tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns)
+  - [CQS/CQRS](#cqscqrs)
+  - [Entity](#entity)
+  - [Value Object](#value-object)
+  - [Aggregate](#aggregate)
+  - [Aggregate Root or Root Entity](#aggregate-root-or-root-entity)
+  - [Use enumeration classes instead of enum types](#use-enumeration-classes-instead-of-enum-types)
+- [eShopOnContainers](#eshoponcontainers)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
 
 ## Tackle Business Complexity in a Microservice with DDD and CQRS Patterns
 
