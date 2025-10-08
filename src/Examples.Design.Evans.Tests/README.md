@@ -2,10 +2,9 @@
 
 ## Table of Contents <!-- omit in toc -->
 
-- [Examples.Design.Evans.Tests](#examplesdesignevanstests)
-  - [Eric Evans's Domain-Driven Design](#eric-evanss-domain-driven-design)
-  - [Development](#development)
-    - [How the project was initialized](#how-the-project-was-initialized)
+- [Eric Evans's Domain-Driven Design](#eric-evanss-domain-driven-design)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
 
 ## Eric Evans's Domain-Driven Design
 

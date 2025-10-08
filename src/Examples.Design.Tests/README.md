@@ -2,11 +2,10 @@
 
 ## Table of Contents <!-- omit in toc -->
 
-- [Examples.Design.Tests](#examplesdesignstests)
-  - [Object Oriented, Domain Design and Architecture](#object-oriented-domain-design-and-architecture)
-    - [Enumerating](#enumerating)
-  - [Development](#development)
-    - [How the project was initialized](#how-the-project-was-initialized)
+- [Object Oriented, Domain Design and Architecture](#object-oriented-domain-design-and-architecture)
+  - [Enumerating](#enumerating)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
 
 ## Object Oriented, Domain Design and Architecture
 

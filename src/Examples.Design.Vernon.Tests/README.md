@@ -2,10 +2,9 @@
 
 ## Table of Contents <!-- omit in toc -->
 
-- [Examples.Design.Vernon.Tests](#examplesdesignvernontests)
-  - [Vaughn Vernon's Domain-Driven Design](#vaughn-vernons-domain-driven-design)
-  - [Development](#development)
-    - [How the project was initialized](#how-the-project-was-initialized)
+- [Vaughn Vernon's Domain-Driven Design](#vaughn-vernons-domain-driven-design)
+- [Development](#development)
+  - [How the project was initialized](#how-the-project-was-initialized)
 
 ## Vaughn Vernon's Domain-Driven Design
 
