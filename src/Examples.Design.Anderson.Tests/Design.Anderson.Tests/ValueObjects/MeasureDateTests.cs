@@ -6,7 +6,7 @@ public class MeasureDateTests
 {
     [Theory]
     [MemberData(nameof(DataOfDisplayValue))]
-    public void GetsDisplayValue_ReturnsExpectFormatString(DateTime value, string expected)
+    public void When_GettingDisplayValue_Then_ReturnsExpectedFormat(DateTime value, string expected)
     {
         // Add units by rounding up to three decimal places.
         var measure = new MeasureDate(value);
@@ -23,7 +23,7 @@ public class MeasureDateTests
 
     [Theory]
     [MemberData(nameof(DataOfEquals))]
-    public void WhenCallingEquals_WorkAsExpected(DateTime value1, DateTime value2, bool expected)
+    public void When_CallingEquals_Then_WorkAsExpected(DateTime value1, DateTime value2, bool expected)
     {
         var measure1 = new MeasureDate(value1);
         var measure2 = new MeasureDate(value2);

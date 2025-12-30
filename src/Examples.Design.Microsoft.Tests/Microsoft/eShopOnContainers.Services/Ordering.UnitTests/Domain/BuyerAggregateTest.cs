@@ -10,7 +10,7 @@ public class BuyerAggregateTest
     { }
 
     [Fact]
-    public void Create_buyer_item_success()
+    public void When_CreatingBuyer_WithValidIdentity_Then_ReturnsInstance()
     {
         //Arrange
         var identity = new Guid().ToString();
@@ -24,7 +24,7 @@ public class BuyerAggregateTest
     }
 
     [Fact]
-    public void Create_buyer_item_fail()
+    public void When_CreatingBuyer_WithEmptyIdentity_Then_ThrowsArgumentNullException()
     {
         //Arrange
         var identity = string.Empty;
@@ -35,7 +35,7 @@ public class BuyerAggregateTest
     }
 
     [Fact]
-    public void add_payment_success()
+    public void When_AddingPaymentMethod_Then_ReturnsPaymentMethod()
     {
         //Arrange
         var cardTypeId = 1;
@@ -57,7 +57,7 @@ public class BuyerAggregateTest
     }
 
     [Fact]
-    public void create_payment_method_success()
+    public void When_CreatingPaymentMethod_WithValidData_Then_ReturnsInstance()
     {
         //Arrange
         var cardTypeId = 1;
@@ -76,7 +76,7 @@ public class BuyerAggregateTest
     }
 
     [Fact]
-    public void create_payment_method_expiration_fail()
+    public void When_CreatingPaymentMethod_WithExpiredDate_Then_ThrowsOrderingDomainException()
     {
         //Arrange
         var cardTypeId = 1;
@@ -91,7 +91,7 @@ public class BuyerAggregateTest
     }
 
     [Fact]
-    public void payment_method_isEqualTo()
+    public void When_ComparingPaymentMethodEquality_Then_ReturnsTrue()
     {
         //Arrange
         var cardTypeId = 1;
@@ -110,7 +110,7 @@ public class BuyerAggregateTest
     }
 
     [Fact]
-    public void Add_new_PaymentMethod_raises_new_event()
+    public void When_AddingPaymentMethod_Then_RaisesDomainEvent()
     {
         //Arrange
         var alias = "fakeAlias";

@@ -9,7 +9,7 @@ namespace Examples.Design.Fowler.Tests.ObjectRelationalBehavioral.LazyLoad.Virtu
 public class VirtualProxyTests
 {
     [Fact]
-    public void Should_Load_Real_Object_Only_On_First_Method_Call()
+    public void When_CallingMethodOnProxy_Then_LoadsRealObjectOnlyOnFirstCall()
     {
         // Arrange
         ICustomer customerProxy = new CustomerProxy(2);

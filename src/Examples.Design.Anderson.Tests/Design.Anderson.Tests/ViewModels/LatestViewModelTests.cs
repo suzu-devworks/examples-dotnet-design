@@ -8,7 +8,7 @@ namespace Examples.Design.Anderson.ViewModels.Tests;
 public class LatestViewModelTests
 {
     [Fact]
-    public void TestMeasureScenario()
+    public void When_ConstructingLatestViewModel_WithMockRepository_Then_ReturnsExpectedValues()
     {
         var measureMock = Substitute.For<IMeasureRepository>();
         var measure = new MeasureEntity("guidA", "2017/01/01 13:00:00".ToDate(), 1.23456f);
@@ -20,7 +20,7 @@ public class LatestViewModelTests
     }
 
     [Fact]
-    public void TestMeasureScenarioWithFake()
+    public void When_ConstructingLatestViewModel_WithFakeRepository_Then_ReturnsExpectedValues()
     {
         var viewModel = new LatestViewModel();
         Assert.Equal("2017/01/01 13:00:00", viewModel.MeasureDate);
