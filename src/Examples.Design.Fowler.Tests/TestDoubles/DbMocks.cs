@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace Examples.Xunit.Helper;
+namespace Examples.TestDoubles;
 
 public class DbMocks
 {

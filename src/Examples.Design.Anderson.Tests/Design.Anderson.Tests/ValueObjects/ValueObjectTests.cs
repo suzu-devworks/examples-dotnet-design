@@ -9,14 +9,15 @@ public partial class ValueObjectTests
     {
         Derived instance = new() { Id = 1, Name = "ABC", ExpiredAt = DateTime.Parse("2000-02-29T12:34:56") };
 
-        instance.Equals(instance).Is(true);
+        Assert.True(instance.Equals(instance));
+
 #pragma warning disable CS1718 // Comparison made to same variable
-        (instance == instance).Is(true);
-        (instance != instance).Is(false);
+        Assert.True(instance == instance);
+        Assert.False(instance != instance);
 #pragma warning restore CS1718 // Comparison made to same variable
 
-        instance.Equals(null).Is(false);
-        instance!.Equals(DateTime.Now).Is(false);
+        Assert.False(instance.Equals(null));
+        Assert.False(instance!.Equals(DateTime.Now));
 
         return;
     }
@@ -25,9 +26,9 @@ public partial class ValueObjectTests
     [MemberData(nameof(DataOfEquals))]
     public void WhenCallingEquals_WorkAsExpected(Derived value1, Derived? value2, bool expected)
     {
-        value1.Equals(value2).Is(expected);
-        (value1 == value2).Is(expected);
-        (value1 != value2).Is(!expected);
+        Assert.Equal(expected, value1.Equals(value2));
+        Assert.Equal(expected, value1 == value2);
+        Assert.Equal(!expected, value1 != value2);
     }
 
     public static readonly TheoryData<Derived, Derived?, bool> DataOfEquals = new()

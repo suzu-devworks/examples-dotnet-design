@@ -14,17 +14,16 @@ public class LatestViewModelTests
         measureMock.Setup(x => x.GetLatest()).Returns(measure);
 
         var viewModel = new LatestViewModel(measureMock.Object);
-        viewModel.MeasureDate.Is("2017/01/01 13:00:00");
-        viewModel.MeasureValue.Is("1.23m/s");
-        return;
+        Assert.Equal("2017/01/01 13:00:00", viewModel.MeasureDate);
+        Assert.Equal("1.23m/s", viewModel.MeasureValue);
     }
 
     [Fact]
     public void TestMeasureScenarioWithFake()
     {
         var viewModel = new LatestViewModel();
-        viewModel.MeasureDate.Is("2017/01/01 13:00:00");
-        viewModel.MeasureValue.Is("1.23m/s");
+        Assert.Equal("2017/01/01 13:00:00", viewModel.MeasureDate);
+        Assert.Equal("1.23m/s", viewModel.MeasureValue);
         return;
     }
 

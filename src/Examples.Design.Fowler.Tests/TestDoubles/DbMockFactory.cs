@@ -1,7 +1,7 @@
 using System.Data;
 using System.Text.RegularExpressions;
 
-namespace Examples.Xunit.Helper;
+namespace Examples.TestDoubles;
 
 public static partial class DbMockFactory
 {
