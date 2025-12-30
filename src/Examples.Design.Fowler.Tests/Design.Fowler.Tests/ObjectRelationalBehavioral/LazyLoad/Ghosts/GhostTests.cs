@@ -36,7 +36,7 @@ public class GhostTests
         Assert.Equal(2, orders.Count);
     }
 
-    [Fact]
+    [Fact(DisplayName = "PofEAA 11.3.6 - Using Ghost Pattern")]
     public void When_UsingGhostPattern_Then_LoadsRelatedDataCorrectly()
     {
         var dbMockEmployee = DbMockFactory.CreateDbMocks(new[] {
