@@ -24,15 +24,13 @@ This project was initialized with the following command:
 dotnet new sln -o .
 
 ## Examples.Design.Tests
-dotnet new xunit -o src/Examples.Design.Tests
+dotnet new xunit3 -o src/Examples.Design.Tests
 dotnet sln add src/Examples.Design.Tests/
 cd src/Examples.Design.Tests
 dotnet add package Microsoft.NET.Test.Sdk
-dotnet add package xunit
+dotnet add package xunit.v3
 dotnet add package xunit.runner.visualstudio
 dotnet add package coverlet.collector
-dotnet add package Moq
-dotnet add package ChainingAssertion.Core.Xunit
 cd ../../
 
 # Update outdated package
