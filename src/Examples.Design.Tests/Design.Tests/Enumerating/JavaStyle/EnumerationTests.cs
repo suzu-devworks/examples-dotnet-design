@@ -14,10 +14,9 @@ public partial class EnumerationTests
     [MemberData(nameof(DatesOfEqualObjects))]
     public void WhenCallingEquals_WithEqualObjects_ReturnsTrue(CardType? instanceA, CardType? instanceB, string reason)
     {
-        EqualityComparer<CardType>.Default.Equals(instanceA, instanceB).IsTrue(reason);
-        object.Equals(instanceA, instanceB).IsTrue(reason);
-
-        (instanceA == instanceB).IsTrue(reason);
+        Assert.True(EqualityComparer<CardType>.Default.Equals(instanceA, instanceB), reason);
+        Assert.True(object.Equals(instanceA, instanceB), reason);
+        Assert.True(instanceA == instanceB, reason);
     }
 
     public static readonly TheoryData<CardType?, CardType?, string> DatesOfEqualObjects = new()
@@ -38,10 +37,9 @@ public partial class EnumerationTests
     [MemberData(nameof(DataOfNotEqualObjects))]
     public void WhenCallingEquals_WithNotEqualObjects_ReturnsFalse(CardType? instanceA, CardType? instanceB, string reason)
     {
-        EqualityComparer<CardType>.Default.Equals(instanceA, instanceB).IsFalse(reason);
-        object.Equals(instanceA, instanceB).IsFalse(reason);
-
-        (instanceA != instanceB).IsTrue(reason);
+        Assert.False(EqualityComparer<CardType>.Default.Equals(instanceA, instanceB), reason);
+        Assert.False(object.Equals(instanceA, instanceB), reason);
+        Assert.True(instanceA != instanceB, reason);
     }
 
     public static readonly TheoryData<CardType?, CardType?, string> DataOfNotEqualObjects = new()
@@ -66,22 +64,19 @@ public partial class EnumerationTests
     [Fact]
     public void WhenCallingCompareTo()
     {
-        (CardType.Amex.CompareTo(CardType.ValueOf("Amex")) == 0).IsTrue();
-
-        (CardType.Amex.CompareTo(CardType.ValueOf("amex")) == 0).IsFalse();
-        (CardType.Amex.CompareTo(CardType.ValueOf("Visa")) == 0).IsFalse();
-        return;
+        Assert.True(CardType.Amex.CompareTo(CardType.ValueOf("Amex")) == 0);
+        Assert.False(CardType.Amex.CompareTo(CardType.ValueOf("amex")) == 0);
+        Assert.False(CardType.Amex.CompareTo(CardType.ValueOf("Visa")) == 0);
     }
 
     [Fact]
     public void WhenCallingValueOf()
     {
-        (CardType.Amex == Enumeration<CardType>.ValueOf("Amex")).IsTrue();
-        (CardType.Amex == CardType.ValueOf("Amex")).IsTrue();
-        (CardType.Amex == CardType.ValueOf("amex", ignoreCase: true)).IsTrue();
-
-        (CardType.Amex == CardType.ValueOf("amex")).IsFalse();
-        (CardType.Amex == CardType.ValueOf("Visa")).IsFalse();
+        Assert.True(CardType.Amex == Enumeration<CardType>.ValueOf("Amex"));
+        Assert.True(CardType.Amex == CardType.ValueOf("Amex"));
+        Assert.True(CardType.Amex == CardType.ValueOf("amex", ignoreCase: true));
+        Assert.False(CardType.Amex == CardType.ValueOf("amex"));
+        Assert.False(CardType.Amex == CardType.ValueOf("Visa"));
         return;
     }
 
@@ -97,7 +92,7 @@ public partial class EnumerationTests
             var x when x == CardType.MasterCard => null,
             _ => throw new NotSupportedException($"{value1}"),
         };
-        value2.IsNotNull();
+        Assert.NotNull(value2);
 
         return;
     }

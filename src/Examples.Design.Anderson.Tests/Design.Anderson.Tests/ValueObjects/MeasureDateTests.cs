@@ -10,9 +10,7 @@ public class MeasureDateTests
     {
         // Add units by rounding up to three decimal places.
         var measure = new MeasureDate(value);
-        measure.DisplayValue.Is(expected);
-
-        return;
+        Assert.Equal(expected, measure.DisplayValue);
     }
 
     public static readonly TheoryData<DateTime, string> DataOfDisplayValue = new()
@@ -30,9 +28,9 @@ public class MeasureDateTests
         var measure1 = new MeasureDate(value1);
         var measure2 = new MeasureDate(value2);
 
-        measure1.Equals(measure2).Is(expected);
-        (measure1 == measure2).Is(expected);
-        (measure1 != measure2).Is(!expected);
+        Assert.Equal(expected, measure1.Equals(measure2));
+        Assert.Equal(expected, measure1 == measure2);
+        Assert.Equal(!expected, measure1 != measure2);
     }
 
     public static readonly TheoryData<DateTime, DateTime, bool> DataOfEquals = new()
