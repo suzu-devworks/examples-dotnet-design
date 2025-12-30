@@ -53,9 +53,9 @@ public class GhostTests
             new { Id = 303L, RecordedAt = DateTime.Parse("2025-10-06T09:00:00+9:00")},
         });
 
-        MapperRegistry.Register<Employee>(new EmployeeMapper(dbMockEmployee.Connection.Object));
-        MapperRegistry.Register<Department>(new DepartmentMapper(dbMockDepartment.Connection.Object));
-        MapperRegistry.Register<TimeRecord>(new TimeRecordMapper(dbMockTimeRecord.Connection.Object));
+        MapperRegistry.Register<Employee>(new EmployeeMapper(dbMockEmployee.Connection));
+        MapperRegistry.Register<Department>(new DepartmentMapper(dbMockDepartment.Connection));
+        MapperRegistry.Register<TimeRecord>(new TimeRecordMapper(dbMockTimeRecord.Connection));
         DataSource.Init(MapperRegistry.Instance);
 
         Employee emp = new Employee(100);

@@ -1,5 +1,6 @@
 using System.Data;
 using System.Text.RegularExpressions;
+using NSubstitute;
 
 namespace Examples.TestDoubles;
 
@@ -14,46 +15,71 @@ public static partial class DbMockFactory
     public static DbMocks CreateDbMocks<T>(IEnumerable<T> data)
         where T : class
     {
+        var verifiers = new List<Action>();
+
         var dataList = data.ToList();
-        var mockReader = new Mock<IDataReader>();
+        var mockReader = Substitute.For<IDataReader>();
 
         // A counter indicating the current row.
         var currentRow = -1;
 
         // Set up the behavior of IDataReader.Read()
-        mockReader.Setup(r => r.Read())
-            .Callback(() => currentRow++)
-            .Returns(() => currentRow < dataList.Count);
+        mockReader.Read().Returns(_ =>
+        {
+            currentRow++;
+            return currentRow < dataList.Count;
+        });
 
         // IDataReader[string]
-        mockReader.Setup(r => r[It.IsAny<string>()])
-            .Returns<string>(colName => GetValue(dataList, currentRow, colName)!);
-        mockReader.Setup(r => r.Close());
-        mockReader.Setup(r => r.Dispose());
+        mockReader[Arg.Any<string>()].Returns(call => GetValue(dataList, currentRow, call.Arg<string>()));
 
-        var mockCommand = new Mock<IDbCommand>();
-        mockCommand.Setup(c => c.ExecuteReader()).Returns(mockReader.Object);
-        mockCommand.SetupProperty(x => x.CommandText);
+        mockReader.Close();
+        mockReader.Dispose();
 
-        var mockParameter = new Mock<IDbDataParameter>();
-        mockCommand.Setup(x => x.CreateParameter()).Returns(mockParameter.Object);
-        mockParameter.SetupProperty(x => x.ParameterName);
-        mockParameter.SetupProperty(x => x.Value);
+        verifiers.Add(() =>
+        {
+            mockReader.Received(dataList.Count == 1 ? 1 : dataList.Count + 1);
+            _ = mockReader.Received()[Arg.Any<string>()];
+            mockReader.Received().Close();
+            mockReader.Received().Dispose();
+        });
 
-        var mockParameters = new Mock<IDataParameterCollection>();
-        mockCommand.Setup(x => x.Parameters).Returns(mockParameters.Object);
-        mockParameters.Setup(x => x.Add(It.IsAny<IDbDataParameter>()));
+        var mockCommand = Substitute.For<IDbCommand>();
+        mockCommand.ExecuteReader().Returns(mockReader);
+        mockCommand.CommandText = Arg.Any<string>();
 
-        mockCommand.Setup(r => r.Dispose());
+        var mockParameter = Substitute.For<IDbDataParameter>();
+        mockCommand.CreateParameter().Returns(mockParameter);
+        mockParameter.ParameterName = Arg.Any<string>();
+        mockParameter.Value = Arg.Any<object>();
 
-        var mockConnection = new Mock<IDbConnection>();
-        mockConnection.Setup(c => c.CreateCommand()).Returns(mockCommand.Object);
+        var mockParameters = Substitute.For<IDataParameterCollection>();
+        mockParameters.Add(Arg.Any<IDbDataParameter>()).Returns(0);
+
+        mockCommand.Parameters.Returns(mockParameters);
+        mockCommand.Dispose();
+
+        verifiers.Add(() =>
+        {
+            mockCommand.Received().ExecuteReader();
+            mockCommand.Received().CommandText = Arg.Any<string>();
+            mockCommand.Received().CreateParameter();
+            _ = mockParameters.Received().Add(Arg.Any<IDbDataParameter>());
+            mockCommand.Received().Dispose();
+        });
+
+        var mockConnection = Substitute.For<IDbConnection>();
+        mockConnection.CreateCommand().Returns(mockCommand);
+
+        verifiers.Add(() =>
+        {
+            mockConnection.Received().CreateCommand();
+        });
 
         return new DbMocks
         {
             Connection = mockConnection,
-            Command = mockCommand,
-            DataReader = mockReader
+            Verifiers = verifiers,
         };
     }
 
