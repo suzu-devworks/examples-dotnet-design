@@ -12,9 +12,7 @@ public class MeasureValueTests
     {
         // Add units by rounding up to three decimal places.
         var measure = new MeasureValue(value);
-        measure.DisplayValue.Is(expected);
-
-        return;
+        Assert.Equal(expected, measure.DisplayValue);
     }
 
 
@@ -25,9 +23,9 @@ public class MeasureValueTests
         var measure1 = new MeasureValue(value1);
         var measure2 = new MeasureValue(value2);
 
-        measure1.Equals(measure2).Is(expected);
-        (measure1 == measure2).Is(expected);
-        (measure1 != measure2).Is(!expected);
+        Assert.Equal(expected, measure1.Equals(measure2));
+        Assert.Equal(expected, measure1 == measure2);
+        Assert.Equal(!expected, measure1 != measure2);
     }
 
     public static readonly TheoryData<double, double, bool> DataOfEquals = new()

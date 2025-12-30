@@ -14,10 +14,9 @@ public partial class EnumerationTests
     [MemberData(nameof(DataOfEqualObjects))]
     public void WhenCallingEquals_WithEqualObjects_ReturnsTrue(CardType? instanceA, CardType? instanceB, string reason)
     {
-        EqualityComparer<CardType>.Default.Equals(instanceA, instanceB).IsTrue(reason);
-        object.Equals(instanceA, instanceB).IsTrue(reason);
-
-        (instanceA == instanceB).IsTrue(reason);
+        Assert.True(EqualityComparer<CardType>.Default.Equals(instanceA, instanceB), reason);
+        Assert.True(object.Equals(instanceA, instanceB), reason);
+        Assert.True(instanceA == instanceB, reason);
     }
 
     public static readonly TheoryData<CardType?, CardType?, string> DataOfEqualObjects = new()
@@ -38,10 +37,9 @@ public partial class EnumerationTests
     [MemberData(nameof(DataOfNotEqualObjects))]
     public void WhenCallingEquals_WithNotEqualObjects_ReturnsFalse(CardType? instanceA, CardType? instanceB, string reason)
     {
-        EqualityComparer<CardType>.Default.Equals(instanceA, instanceB).IsFalse(reason);
-        object.Equals(instanceA, instanceB).IsFalse(reason);
-
-        (instanceA != instanceB).IsTrue(reason);
+        Assert.False(EqualityComparer<CardType>.Default.Equals(instanceA, instanceB), reason);
+        Assert.False(object.Equals(instanceA, instanceB), reason);
+        Assert.True(instanceA != instanceB, reason);
     }
 
     public static readonly TheoryData<CardType?, CardType?, string> DataOfNotEqualObjects = new()
@@ -73,25 +71,25 @@ public partial class EnumerationTests
     [Fact]
     public void WhenCallingValueOf_WorkAsExpected()
     {
-        (CardType.Amex == Enumeration<CardType>.Parse("Amex")).IsTrue();
+        Assert.True(CardType.Amex == Enumeration<CardType>.Parse("Amex"));
 
-        (CardType.Amex == CardType.Parse("Amex")).IsTrue();
-        (CardType.Amex == CardType.Parse("amex")).IsTrue();
-        (CardType.Amex == CardType.Parse("1")).IsTrue();
-        (CardType.Amex == CardType.Parse("ameX")).IsFalse();
+        Assert.True(CardType.Amex == CardType.Parse("Amex"));
+        Assert.True(CardType.Amex == CardType.Parse("amex"));
+        Assert.True(CardType.Amex == CardType.Parse("1"));
+        Assert.False(CardType.Amex == CardType.Parse("ameX"));
 
-        (CardType.Visa == CardType.Parse("Visa")).IsTrue();
-        (CardType.Visa == CardType.Parse("visa")).IsTrue();
-        (CardType.Visa == CardType.Parse("2")).IsTrue();
-        (CardType.Visa == CardType.Parse("vIsa")).IsFalse();
+        Assert.True(CardType.Visa == CardType.Parse("Visa"));
+        Assert.True(CardType.Visa == CardType.Parse("visa"));
+        Assert.True(CardType.Visa == CardType.Parse("2"));
+        Assert.False(CardType.Visa == CardType.Parse("vIsa"));
 
-        (CardType.MasterCard == CardType.Parse("MasterCard")).IsTrue();
-        (CardType.MasterCard == CardType.Parse("mastercard")).IsTrue();
-        (CardType.MasterCard == CardType.Parse("3")).IsTrue();
-        (CardType.MasterCard == CardType.Parse("mAsterCard")).IsFalse();
+        Assert.True(CardType.MasterCard == CardType.Parse("MasterCard"));
+        Assert.True(CardType.MasterCard == CardType.Parse("mastercard"));
+        Assert.True(CardType.MasterCard == CardType.Parse("3"));
+        Assert.False(CardType.MasterCard == CardType.Parse("mAsterCard"));
 
         // spell-checker:: disable-next-line
-        CardType.Parse("hogehoge").IsNull();
+        Assert.Null(CardType.Parse("hogehoge"));
         Assert.Throws<ArgumentNullException>(() => CardType.Parse(null));
 
         return;
@@ -109,7 +107,7 @@ public partial class EnumerationTests
             var x when x == CardType.MasterCard => null,
             _ => throw new NotSupportedException($"{value1}"),
         };
-        value2.IsNotNull();
+        Assert.NotNull(value2);
 
         return;
     }
