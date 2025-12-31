@@ -18,8 +18,6 @@ public partial class ValueObjectTests
 
         Assert.False(instance.Equals(null));
         Assert.False(instance!.Equals(DateTime.Now));
-
-        return;
     }
 
     [Theory]
