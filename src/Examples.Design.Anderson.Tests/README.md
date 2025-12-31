@@ -86,15 +86,14 @@ This project was initialized with the following command:
 dotnet new sln -o .
 
 ## Examples.Design.Anderson.Tests
-dotnet new xunit -o src/Examples.Design.Anderson.Tests
+dotnet new xunit3 -o src/Examples.Design.Anderson.Tests
 dotnet sln add src/Examples.Design.Anderson.Tests/
 cd src/Examples.Design.Anderson.Tests
 dotnet add package Microsoft.NET.Test.Sdk
-dotnet add package xunit
+dotnet add package xunit.v3
 dotnet add package xunit.runner.visualstudio
 dotnet add package coverlet.collector
-dotnet add package Moq
-dotnet add package ChainingAssertion.Core.Xunit
+dotnet add package NSubstitute
 cd ../../
 
 # Update outdated package

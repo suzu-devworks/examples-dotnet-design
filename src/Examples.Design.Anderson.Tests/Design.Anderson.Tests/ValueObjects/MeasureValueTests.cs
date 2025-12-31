@@ -8,7 +8,7 @@ public class MeasureValueTests
     [InlineData(0.0051, "0.01m/s")]
     [InlineData(-13.005, "-13m/s")]
     [InlineData(-13.0051, "-13.01m/s")]
-    public void GetsDisplayValue_ReturnsExpectFormatString(double value, string expected)
+    public void When_GettingDisplayValue_Then_ReturnsExpectedFormat(double value, string expected)
     {
         // Add units by rounding up to three decimal places.
         var measure = new MeasureValue(value);
@@ -18,7 +18,7 @@ public class MeasureValueTests
 
     [Theory]
     [MemberData(nameof(DataOfEquals))]
-    public void WhenCallingEquals_WorkAsExpected(double value1, double value2, bool expected)
+    public void When_CallingEquals_Then_WorkAsExpected(double value1, double value2, bool expected)
     {
         var measure1 = new MeasureValue(value1);
         var measure2 = new MeasureValue(value2);

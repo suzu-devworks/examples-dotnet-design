@@ -229,14 +229,14 @@ This project was initialized with the following command:
 dotnet new sln -o .
 
 ## Examples.Design.Fowler.Tests
-dotnet new xunit -o src/Examples.Design.Fowler.Tests
+dotnet new xunit3 -o src/Examples.Design.Fowler.Tests
 dotnet sln add src/Examples.Design.Fowler.Tests/
 cd src/Examples.Design.Fowler.Tests
 dotnet add package Microsoft.NET.Test.Sdk
-dotnet add package xunit
+dotnet add package xunit.v3
 dotnet add package xunit.runner.visualstudio
 dotnet add package coverlet.collector
-dotnet add package Moq
+dotnet add package NSubstitute
 cd ../../
 
 # Update outdated package

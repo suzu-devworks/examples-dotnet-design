@@ -12,7 +12,7 @@ public partial class EnumerationTests
 
     [Theory]
     [MemberData(nameof(DataOfEqualObjects))]
-    public void WhenCallingEquals_WithEqualObjects_ReturnsTrue(CardType? instanceA, CardType? instanceB, string reason)
+    public void When_CallingEqualsWithEqualObjects_Then_ReturnsTrue(CardType? instanceA, CardType? instanceB, string reason)
     {
         Assert.True(EqualityComparer<CardType>.Default.Equals(instanceA, instanceB), reason);
         Assert.True(object.Equals(instanceA, instanceB), reason);
@@ -35,7 +35,7 @@ public partial class EnumerationTests
 
     [Theory]
     [MemberData(nameof(DataOfNotEqualObjects))]
-    public void WhenCallingEquals_WithNotEqualObjects_ReturnsFalse(CardType? instanceA, CardType? instanceB, string reason)
+    public void When_CallingEqualsWithNotEqualObjects_Then_ReturnsFalse(CardType? instanceA, CardType? instanceB, string reason)
     {
         Assert.False(EqualityComparer<CardType>.Default.Equals(instanceA, instanceB), reason);
         Assert.False(object.Equals(instanceA, instanceB), reason);
@@ -69,7 +69,7 @@ public partial class EnumerationTests
     //}
 
     [Fact]
-    public void WhenCallingValueOf_WorkAsExpected()
+    public void When_CallingValueOf_Then_WorkAsExpected()
     {
         Assert.True(CardType.Amex == Enumeration<CardType>.Parse("Amex"));
 
@@ -96,7 +96,7 @@ public partial class EnumerationTests
     }
 
     [Fact]
-    public void WhenUsedInSwitchStatement()
+    public void When_UsedInSwitchStatement_Then_ResultIsNotNull()
     {
         var value1 = CardType.Parse("Visa");
 

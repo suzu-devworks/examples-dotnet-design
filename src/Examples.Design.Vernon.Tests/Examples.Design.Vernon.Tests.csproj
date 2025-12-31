@@ -36,10 +36,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Using Include="Xunit" />
-    <Using Include="ChainingAssertion" />
-    <Using Include="Moq" />
-  </ItemGroup>
-
 </Project>

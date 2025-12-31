@@ -5,7 +5,7 @@ namespace Examples.Design.Anderson.ValueObjects.Tests;
 public partial class ValueObjectTests
 {
     [Fact]
-    public void WhenCallingEqualsReference_WorkAsExpected()
+    public void When_CallingEqualsReference_Then_WorkAsExpected()
     {
         Derived instance = new() { Id = 1, Name = "ABC", ExpiredAt = DateTime.Parse("2000-02-29T12:34:56") };
 
@@ -24,7 +24,7 @@ public partial class ValueObjectTests
 
     [Theory]
     [MemberData(nameof(DataOfEquals))]
-    public void WhenCallingEquals_WorkAsExpected(Derived value1, Derived? value2, bool expected)
+    public void When_CallingEquals_Then_WorkAsExpected(Derived value1, Derived? value2, bool expected)
     {
         Assert.Equal(expected, value1.Equals(value2));
         Assert.Equal(expected, value1 == value2);

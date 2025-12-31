@@ -9,7 +9,7 @@ namespace Examples.Design.Fowler.Tests.ObjectRelationalBehavioral.LazyLoad.LazyI
 public class LazyInitializationTests
 {
     [Fact]
-    public void Should_Load_Orders_Only_On_First_Access()
+    public void When_AccessingOrders_Then_LoadsOrdersOnlyOnFirstAccess()
     {
         var customer = new Customer { Id = 1, Name = "Taro Yamada" };
 

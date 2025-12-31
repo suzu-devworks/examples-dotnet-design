@@ -13,7 +13,7 @@ namespace Examples.Design.Fowler.Tests.ObjectRelationalBehavioral.LazyLoad.Ghost
 public class GhostTests
 {
     [Fact]
-    public void Should_Load_Full_State_On_First_Access_To_Any_Property()
+    public void When_AccessingAnyPropertyOnGhost_Then_LoadsFullState()
     {
         // Arrange: Create a ghost object with only an ID.
         var customer = new Customer(4);
@@ -36,8 +36,8 @@ public class GhostTests
         Assert.Equal(2, orders.Count);
     }
 
-    [Fact]
-    public void TestPofEAA_11_3_6_UseGhost()
+    [Fact(DisplayName = "PofEAA 11.3.6 - Using Ghost Pattern")]
+    public void When_UsingGhostPattern_Then_LoadsRelatedDataCorrectly()
     {
         var dbMockEmployee = DbMockFactory.CreateDbMocks(new[] {
             new { Id = 100L, Name = "ALICE", DepartmentId = 200L },

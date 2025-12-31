@@ -12,7 +12,7 @@ public class OrderAggregateTest
     { }
 
     [Fact]
-    public void Create_order_item_success()
+    public void When_CreatingOrderItem_WithValidInputs_Then_ReturnsInstance()
     {
         //Arrange
         var productId = 1;
@@ -30,7 +30,7 @@ public class OrderAggregateTest
     }
 
     [Fact]
-    public void Invalid_number_of_units()
+    public void When_CreatingOrderItem_WithNegativeUnits_Then_ThrowsOrderingDomainException()
     {
         //Arrange
         var productId = 1;
@@ -45,7 +45,7 @@ public class OrderAggregateTest
     }
 
     [Fact]
-    public void Invalid_total_of_order_item_lower_than_discount_applied()
+    public void When_CreatingOrderItem_TotalLowerThanDiscount_Then_ThrowsOrderingDomainException()
     {
         //Arrange
         var productId = 1;
@@ -60,7 +60,7 @@ public class OrderAggregateTest
     }
 
     [Fact]
-    public void Invalid_discount_setting()
+    public void When_SettingNegativeDiscount_Then_ThrowsOrderingDomainException()
     {
         //Arrange
         var productId = 1;
@@ -78,7 +78,7 @@ public class OrderAggregateTest
     }
 
     [Fact]
-    public void Invalid_units_setting()
+    public void When_AddingNegativeUnits_Then_ThrowsOrderingDomainException()
     {
         //Arrange
         var productId = 1;
@@ -96,7 +96,7 @@ public class OrderAggregateTest
     }
 
     [Fact]
-    public void when_add_two_times_on_the_same_item_then_the_total_of_order_should_be_the_sum_of_the_two_items()
+    public void When_AddingSameItemTwice_Then_OrderTotalIsSumOfItems()
     {
         var address = new AddressBuilder().Build();
         var order = new OrderBuilder(address)
@@ -108,7 +108,7 @@ public class OrderAggregateTest
     }
 
     [Fact]
-    public void Add_new_Order_raises_new_event()
+    public void When_CreatingNewOrder_Then_RaisesOneDomainEvent()
     {
         //Arrange
         var street = "fakeStreet";
@@ -131,7 +131,7 @@ public class OrderAggregateTest
     }
 
     [Fact]
-    public void Add_event_Order_explicitly_raises_new_event()
+    public void When_AddingDomainEventToOrder_Then_DomainEventCountIncreases()
     {
         //Arrange
         var street = "fakeStreet";
@@ -154,7 +154,7 @@ public class OrderAggregateTest
     }
 
     [Fact]
-    public void Remove_event_Order_explicitly()
+    public void When_RemovingDomainEventFromOrder_Then_DomainEventCountDecreases()
     {
         //Arrange
         var street = "fakeStreet";

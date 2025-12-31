@@ -9,7 +9,7 @@ namespace Examples.Design.Fowler.Tests.ObjectRelationalBehavioral.LazyLoad.Value
 public class ValueHolderTests
 {
     [Fact]
-    public void Should_Load_Value_Only_When_Accessed_Via_ValueHolder()
+    public void When_AccessingValueHolder_Then_LoadsValueOnlyOnFirstAccess()
     {
         // Arrange
         var customer = new Customer(3);
