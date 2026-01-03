@@ -33,7 +33,6 @@ namespace Examples.Design.Anderson.Infrastructures
             }
 
             Entities.Add(entity);
-            return;
         }
     }
 }

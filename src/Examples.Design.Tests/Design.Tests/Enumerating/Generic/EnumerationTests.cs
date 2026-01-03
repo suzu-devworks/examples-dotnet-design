@@ -91,8 +91,6 @@ public partial class EnumerationTests
         // spell-checker:: disable-next-line
         Assert.Null(CardType.Parse("hogehoge"));
         Assert.Throws<ArgumentNullException>(() => CardType.Parse(null));
-
-        return;
     }
 
     [Fact]
@@ -108,8 +106,6 @@ public partial class EnumerationTests
             _ => throw new NotSupportedException($"{value1}"),
         };
         Assert.NotNull(value2);
-
-        return;
     }
 
 }

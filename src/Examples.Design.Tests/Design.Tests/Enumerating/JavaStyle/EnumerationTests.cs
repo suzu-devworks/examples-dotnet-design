@@ -77,7 +77,6 @@ public partial class EnumerationTests
         Assert.True(CardType.Amex == CardType.ValueOf("amex", ignoreCase: true));
         Assert.False(CardType.Amex == CardType.ValueOf("amex"));
         Assert.False(CardType.Amex == CardType.ValueOf("Visa"));
-        return;
     }
 
     [Fact]
@@ -93,8 +92,6 @@ public partial class EnumerationTests
             _ => throw new NotSupportedException($"{value1}"),
         };
         Assert.NotNull(value2);
-
-        return;
     }
 
 }
