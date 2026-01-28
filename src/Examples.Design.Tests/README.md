@@ -27,11 +27,9 @@ dotnet new sln -o .
 dotnet new xunit3 -o src/Examples.Design.Tests
 dotnet sln add src/Examples.Design.Tests/
 cd src/Examples.Design.Tests
-dotnet add package Microsoft.NET.Test.Sdk
-dotnet add package xunit.v3
-dotnet add package xunit.runner.visualstudio
-dotnet add package coverlet.collector
-cd ../../
+dotnet add package xunit.v3.mtp-v2
+dotnet add package Microsoft.Testing.Extensions.CodeCoverage
+dotnet add package NSubstitute
 
 # Update outdated package
 dotnet list package --outdated

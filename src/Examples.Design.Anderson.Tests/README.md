@@ -89,10 +89,8 @@ dotnet new sln -o .
 dotnet new xunit3 -o src/Examples.Design.Anderson.Tests
 dotnet sln add src/Examples.Design.Anderson.Tests/
 cd src/Examples.Design.Anderson.Tests
-dotnet add package Microsoft.NET.Test.Sdk
-dotnet add package xunit.v3
-dotnet add package xunit.runner.visualstudio
-dotnet add package coverlet.collector
+dotnet add package xunit.v3.mtp-v2
+dotnet add package Microsoft.Testing.Extensions.CodeCoverage
 dotnet add package NSubstitute
 cd ../../
 

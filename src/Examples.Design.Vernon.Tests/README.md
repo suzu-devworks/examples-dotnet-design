@@ -24,10 +24,10 @@ dotnet new sln -o .
 dotnet new xunit3 -o src/Examples.Design.Vernon.Tests
 dotnet sln add src/Examples.Design.Vernon.Tests/
 cd src/Examples.Design.Vernon.Tests
-dotnet add package Microsoft.NET.Test.Sdk
-dotnet add package xunit.v3
-dotnet add package xunit.runner.visualstudio
-dotnet add package coverlet.collector
+dotnet add package xunit.v3.mtp-v2
+dotnet add package Microsoft.Testing.Extensions.CodeCoverage
+dotnet add package NSubstitute
+dotnet add package Newtonsoft.Json
 cd ../../
 
 # Update outdated package
