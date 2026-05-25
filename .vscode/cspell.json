@@ -1,15 +1,19 @@
 {
   "version": "0.2",
   "ignorePaths": [
-    ".git",
     ".devcontainer",
-    ".config",
-    ".github",
-    ".vscode",
     ".editorconfig",
+    ".git",
+    ".gitattributes",
+    ".github",
     ".gitignore",
+    ".prettier*",
+    ".vscode",
     "*.csproj",
-    "*.sln"
+    "*.slnx",
+    "dotnet-tools.json",
+    "launchSettings.json",
+    "global.json"
   ],
   "dictionaryDefinitions": [],
   "dictionaries": [],

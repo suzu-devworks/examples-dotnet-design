@@ -2,11 +2,10 @@ name: build
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
     paths:
       - "src/**"
   pull_request:
-    branches: [ "main" ]
     paths:
       - "src/**"
   workflow_dispatch:
@@ -29,7 +28,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: '10.0.x'
+          dotnet-version: "10.0.x"
       - name: Display .NET info
         run: dotnet --info
 
