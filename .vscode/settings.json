@@ -1,7 +1,4 @@
 {
-  "[aspnetcorerazor]": {
-    "editor.defaultFormatter": "ms-dotnettools.csharp"
-  },
   "[csharp]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
@@ -17,12 +14,13 @@
     },
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
-  "[razor]": {
-    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
   },
-  "csharpOrganizeUsings.removeUnnecessaryUsings": true,
-  "csharpOrganizeUsings.sortOrder": "System",
-  "csharpOrganizeUsings.splitGroups": false,
+  "chat.tools.terminal.autoApprove": {
+    "npx -y markdownlint-cli": true
+  },
+  "dotnet.formatting.organizeImportsOnFormat": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "files.associations": {
@@ -30,8 +28,9 @@
     "appsettings*.json": "jsonc",
     "web.config": "xml"
   },
-  "markdownlint.config": {},
-  "omnisharp.enableAsyncCompletion": true,
+  "markdown.validate.enabled": false,
+  "markdownlint.configFile": ".markdownlint.json",
+  "markdownlint.run": "onType",
   "omnisharp.enableEditorConfigSupport": true,
   "omnisharp.enableMsBuildLoadProjectsOnDemand": true,
   "remote.autoForwardPortsFallback": 0
