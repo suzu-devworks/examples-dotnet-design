@@ -131,7 +131,8 @@
   A view that processes domain data element by element and transforms it into HTML.
 
 - ***Two Step View***
-  Turns domain data into HTML in two steps: first by forming some kind of logical page, then rendering the logical page into HTML.
+  Turns domain data into HTML in two steps: first by forming some kind of logical page, then rendering the logical page
+  into HTML.
 
 - ***Application Controller***
   A centralized point for handling screen navigation and the flow of an application.
@@ -150,7 +151,8 @@
   Prevents conflicts between concurrent business transactions by detecting a conflict and rolling back the transaction.
 
 - ***Pessimistic Offline Lock***
-  Prevents conflicts between concurrent business transactions by allowing only one business transaction at a time to access data.
+  Prevents conflicts between concurrent business transactions by allowing only one business transaction at a time
+  to access data.
 
 - ***Coarse-Grained Lock***
   Locks a set of related objects with a single lock.
