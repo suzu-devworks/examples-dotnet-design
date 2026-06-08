@@ -1,17 +1,5 @@
 # Examples.Design.Anderson.Tests
 
-## Table of Contents <!-- omit in toc -->
-
-- [Piikokku Anderson's Domain-Driven Design](#piikokku-andersons-domain-driven-design)
-  - [Hexagonal Architecture](#hexagonal-architecture)
-  - [Domain logic and client code](#domain-logic-and-client-code)
-  - [Entity](#entity)
-  - [ValueObject](#valueobject)
-  - [Repository](#repository)
-  - [Factory](#factory)
-- [Development](#development)
-  - [How the project was initialized](#how-the-project-was-initialized)
-
 ## Piikokku Anderson's Domain-Driven Design
 <!-- spell-checker:words Piikokku -->
 
@@ -28,9 +16,12 @@ Domain-Driven Development originally recommended a "layered architecture."
 
 Everything depends only on the lower layer.
 
-However, this dependency relationship makes it impossible to refer to the domain definition in the infrastructure, which causes inconvenience. Therefore, an architecture with the domain layer at the top is recommended. This is called dependency inversion, but we will leave the details aside.
+However, this dependency relationship makes it impossible to refer to the domain definition in the infrastructure,
+which causes inconvenience. Therefore, an architecture with the domain layer at the top is recommended.
+This is called dependency inversion, but we will leave the details aside.
 
-I'm not sure if it's an evolution of layered architecture, but conceptually, hexagonal architecture is the best at the moment, and it's said to represent Domain Driven Development.
+I'm not sure if it's an evolution of layered architecture, but conceptually, hexagonal architecture is the best at
+the moment, and it's said to represent Domain Driven Development.
 
 The idea is to define the domain layer and then write other technical elements outside of it.
 
@@ -44,9 +35,11 @@ Application logic is also called client code. Application logic is the code that
 
 ### Entity
 
-In Domain Driven Development, an Entity is a meaningful piece of data, which can be thought of as a single row of data in a database.
+In Domain Driven Development, an Entity is a meaningful piece of data, which can be thought of as a single row of data
+in a database.
 
-The rule for an entity is that it must be unique. Even if there are multiple identical entities, it is necessary to be able to identify one of them.
+The rule for an entity is that it must be unique. Even if there are multiple identical entities, it is necessary
+to be able to identify one of them.
 
 ### ValueObject
 
@@ -61,7 +54,8 @@ The characteristics of ValueObject are as follows:
 
 ### Repository
 
-A repository is an interface that is placed at the boundary between logic that contacts the outside world and logic that does not when an application contacts the outside world.
+A repository is an interface that is placed at the boundary between logic that contacts the outside world and logic
+that does not when an application contacts the outside world.
 
 Interfaces are placed in the Domain layer.
 
@@ -69,31 +63,9 @@ Implementation is done in the Infrastructure layer.
 
 ### Factory
 
-The creation of instances is left to a factory class. A factory is created to allow classes that implement these interfaces to be branched based on certain criteria.
+The creation of instances is left to a factory class. A factory is created to allow classes that implement these
+interfaces to be branched based on certain criteria.
 
 > [!NOTE]
 > Create a class called "Factories" directly under Infrastructure.  
 > The access modifier of the concrete repository class is set to internal to ensure that it is only accessed by the factory.
-
-## Development
-
-### How the project was initialized
-
-This project was initialized with the following command:
-
-```shell
-## Solution
-dotnet new sln -o .
-
-## Examples.Design.Anderson.Tests
-dotnet new xunit3 -o src/Examples.Design.Anderson.Tests
-dotnet sln add src/Examples.Design.Anderson.Tests/
-cd src/Examples.Design.Anderson.Tests
-dotnet add package xunit.v3.mtp-v2
-dotnet add package Microsoft.Testing.Extensions.CodeCoverage
-dotnet add package NSubstitute
-cd ../../
-
-# Update outdated package
-dotnet list package --outdated
-```
