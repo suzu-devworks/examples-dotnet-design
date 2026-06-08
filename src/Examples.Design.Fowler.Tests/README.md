@@ -1,22 +1,5 @@
 # Examples.Design.Fowler.Tests
 
-## Table of Contents <!-- omit in toc -->
-
-- [Martin Fowler's Domain-Driven Design](#martin-fowlers-domain-driven-design)
-- [Patterns of Enterprise Application Architecture](#patterns-of-enterprise-application-architecture)
-  - [Domain Logic Patterns](#domain-logic-patterns)
-  - [Data Source Architectural Patterns](#data-source-architectural-patterns)
-  - [Object-Relational Behavioral Patterns](#object-relational-behavioral-patterns)
-  - [Object-Relational Structural Patterns](#object-relational-structural-patterns)
-  - [Object-Relational Metadata Mapping Patterns](#object-relational-metadata-mapping-patterns)
-  - [Web Presentation Patterns](#web-presentation-patterns)
-  - [Distribution Patterns](#distribution-patterns)
-  - [Offline Concurrency Patterns](#offline-concurrency-patterns)
-  - [Session State Patterns](#session-state-patterns)
-  - [Base Patterns](#base-patterns)
-- [Development](#development)
-  - [How the project was initialized](#how-the-project-was-initialized)
-
 ## Martin Fowler's Domain-Driven Design
 
 - [domain driven design - martinfowler.com](https://martinfowler.com/tags/domain%20driven%20design.html)
@@ -39,7 +22,8 @@
   A single instance that handles the business logic for all rows in a database table or view.
 
 - ***Service Layer***
-  Defines an application's boundary with a layer of services that establishes a set of available operations and coordinates the application's response in each operation.
+  Defines an application's boundary with a layer of services that establishes a set of available operations
+  and coordinates the application's response in each operation.
 
 ### Data Source Architectural Patterns
 
@@ -76,10 +60,12 @@
 ### Object-Relational Behavioral Patterns
 
 - ***Unit of Work***
-  Maintains a list of objects affected by a business transaction and coordinates the writing out of changes and the resolution of concurrency problems.
+  Maintains a list of objects affected by a business transaction and coordinates the writing out of changes and the
+  resolution of concurrency problems.
 
 - ***Identity Map***
-  Ensures that each object gets loaded only once by keeping every loaded object in a map. Looks up objects using the map when referring to them.
+  Ensures that each object gets loaded only once by keeping every loaded object in a map. Looks up objects using the map
+  when referring to them.
 
 - [***Lazy Load***](./Design.Fowler.Tests/ObjectRelationalBehavioral/LazyLoad/README.md)
   An object that doesn't contain all of the data you need but knows how to get it.
@@ -145,7 +131,8 @@
   A view that processes domain data element by element and transforms it into HTML.
 
 - ***Two Step View***
-  Turns domain data into HTML in two steps: first by forming some kind of logical page, then rendering the logical page into HTML.
+  Turns domain data into HTML in two steps: first by forming some kind of logical page, then rendering the logical page
+  into HTML.
 
 - ***Application Controller***
   A centralized point for handling screen navigation and the flow of an application.
@@ -164,7 +151,8 @@
   Prevents conflicts between concurrent business transactions by detecting a conflict and rolling back the transaction.
 
 - ***Pessimistic Offline Lock***
-  Prevents conflicts between concurrent business transactions by allowing only one business transaction at a time to access data.
+  Prevents conflicts between concurrent business transactions by allowing only one business transaction at a time
+  to access data.
 
 - ***Coarse-Grained Lock***
   Locks a set of related objects with a single lock.
@@ -217,26 +205,3 @@
 
 - ***Plugin***
   Links classes during configuration rather than compilation.
-
-## Development
-
-### How the project was initialized
-
-This project was initialized with the following command:
-
-```shell
-## Solution
-dotnet new sln -o .
-
-## Examples.Design.Fowler.Tests
-dotnet new xunit3 -o src/Examples.Design.Fowler.Tests
-dotnet sln add src/Examples.Design.Fowler.Tests/
-cd src/Examples.Design.Fowler.Tests
-dotnet add package xunit.v3.mtp-v2
-dotnet add package Microsoft.Testing.Extensions.CodeCoverage
-dotnet add package NSubstitute
-cd ../../
-
-# Update outdated package
-dotnet list package --outdated
-```
