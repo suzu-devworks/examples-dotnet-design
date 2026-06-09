@@ -3,6 +3,8 @@ description: Repository-specific constraints for this codebase.
 applyTo: "**"
 ---
 
+# Repository Instructions
+
 - Do not edit files under any `bin/` or `obj/` directory; they are generated artifacts.
 - Keep each pattern/example isolated within its own project under `src/Examples.Design.*.Tests`; avoid cross-project references unless explicitly requested.
 - In test project `.csproj` files, set `<TargetFramework>$(LatestFramework)</TargetFramework>`; do not hardcode specific framework versions.
