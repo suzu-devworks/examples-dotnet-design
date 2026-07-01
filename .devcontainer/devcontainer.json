@@ -9,6 +9,11 @@
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "postCreateCommand": "/bin/sh ./.devcontainer/postCreateCommand.sh",
   "remoteUser": "vscode",
+  "features": {
+    "ghcr.io/devcontainers/features/node": {},
+    "ghcr.io/devcontainers/features/copilot-cli": {},
+    "ghcr.io/devcontainers/features/github-cli": {}
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -22,10 +27,5 @@
         "DrBlury.protobuf-vsc"
       ]
     }
-  },
-  "features": {
-    "ghcr.io/devcontainers/features/node:": {},
-    "ghcr.io/devcontainers/features/copilot-cli:1": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {}
   }
 }
