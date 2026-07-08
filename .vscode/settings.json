@@ -15,7 +15,9 @@
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
   "[xml]": {
-    "editor.defaultFormatter": "DotJoshJohnson.xml"
+    "editor.defaultFormatter": "DotJoshJohnson.xml",
+    "editor.wordWrap": "off",
+    "files.trimTrailingWhitespace": true,
   },
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -26,5 +28,6 @@
   },
   "omnisharp.enableEditorConfigSupport": true,
   "omnisharp.enableMsBuildLoadProjectsOnDemand": true,
-  "remote.autoForwardPortsFallback": 0
+  "remote.autoForwardPortsFallback": 0,
+  "xml.format.maxLineWidth": 0
 }

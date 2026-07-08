@@ -6,36 +6,20 @@
 
 ## What is this repository?
 
-This repository contains examples and experiments with programming patterns such as Domain-Driven Design (DDD) using .NET.
+This repository is part of the `examples` collection.
+It explores software design patterns and domain-driven design concepts using .NET and C#.
 
-Most of the content focuses on the Generic Host and the infrastructure commonly used in .NET applications,
-such as dependency injection, configuration, logging, application lifetime management, and command-line argument handling.
-
-The repository primarily serves as a personal knowledge base and a place to explore ideas through small, focused examples.
-
-The examples reflect my current understanding of each topic and may evolve over time.
+The examples are organized around well-known references—GoF patterns, Fowler's enterprise patterns, and multiple DDD
+approaches—each implemented as an isolated, runnable test project.
 
 ## What topics are covered?
 
-Topics currently covered include:
-
-- GoF design patterns (creational, structural, and behavioral)
-- Patterns of Enterprise Application Architecture (Martin Fowler)
-- Domain-Driven Design (DDD) fundamentals, including entities, value objects, repositories, and aggregates
-- DDD-oriented examples inspired by Eric Evans, Vaughn Vernon, and Piikokku Anderson
-- Microsoft architecture guidance around DDD and CQRS patterns
-- Test-focused implementations using xUnit and test doubles
-
-Additional topics may be added as the repository evolves.
-
-## Why use Dev Containers?
-
-I recommend using Dev Containers when working with this repository.
-
-The development container provides the tools and dependencies needed to build and run the examples,
-making it easy to get started without modifying your local environment.
-
-For container details, see [`.devcontainer/devcontainer.json`](.devcontainer/devcontainer.json).
-
-After the container is created, run [`.devcontainer/postCreateCommand.sh`](.devcontainer/postCreateCommand.sh)
-and follow the instructions shown in the terminal.
+- GoF design patterns: creational, structural, and behavioral
+- Martin Fowler's Patterns of Enterprise Application Architecture
+- Domain-Driven Design (DDD) from Eric Evans
+- DDD from Vaughn Vernon's *Implementing Domain-Driven Design*
+- DDD from Piikokku Anderson's blog series
+- Microsoft's DDD and CQRS patterns for microservices
+- Hexagonal (Ports and Adapters) architecture
+- CQRS and CQS patterns
+- Entity, Value Object, and Repository patterns
