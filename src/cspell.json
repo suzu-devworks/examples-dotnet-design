@@ -4,11 +4,16 @@
   "dictionaryDefinitions": [],
   "dictionaries": [],
   "words": [
+    "behaviour",
     "Mediat",
-    "Seedwork"
+    "Memberwise",
+    "overriden",
+    "Seedwork",
+    "unmutated",
+    "xpto"
   ],
   "ignoreWords": [],
   "import": [
-    "../../.vscode/cspell.json"
+    "../.vscode/cspell.json"
   ]
 }
