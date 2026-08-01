@@ -4,11 +4,6 @@ on:
   pull_request:
     paths:
       - "src/**"
-  push:
-    branches:
-      - "develop"
-    paths:
-      - "src/**"
       - ".github/workflows/dotnet-ci.yml"
   workflow_dispatch:
 
